@@ -1,0 +1,3 @@
+[submodule "src/system/modules/Assetic/vendor/assetic"]
+	path = src/system/modules/Assetic/vendor/assetic
+	url = https://github.com/kriswallsmith/assetic.git
