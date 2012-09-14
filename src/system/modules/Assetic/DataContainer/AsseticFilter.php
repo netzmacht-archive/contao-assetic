@@ -2,6 +2,9 @@
 
 namespace InfinitySoft\Assetic\DataContainer;
 
+use
+\Assetic\Model\FilterChainModel;
+
 class AsseticFilter
 {
     /**
@@ -36,10 +39,8 @@ class AsseticFilter
     {
         $options = array();
 
-        foreach (array('compiler', 'minimizer') as $group)
-        {
-            foreach ($GLOBALS['ASSETIC'][$group] as $name => $class)
-            {
+        foreach (array('compiler', 'minimizer') as $group) {
+            foreach ($GLOBALS['ASSETIC'][$group] as $name => $class) {
                 $options[$group][] = $name;
             }
         }
@@ -51,36 +52,41 @@ class AsseticFilter
     {
         $options = array();
 
-        $objFilterChain = \Database::getInstance()
-            ->query('SELECT * FROM tl_assetic_filter_chain WHERE type=\'css\' ORDER BY type');
-        while ($objFilterChain->next()) {
+        $filterChain = FilterChainModel::findBy('type',
+                                                'css',
+                                                ['order' => 'type']);
+        while ($filterChain->next()) {
             $label = '[';
-            $label .= $GLOBALS['TL_LANG']['tl_assetic_filter_chain']['types'][$objFilterChain->type] ?: $objFilterChain->type;
+            $label .= $GLOBALS['TL_LANG']['tl_assetic_filter_chain']['types'][$filterChain->type]
+                ? : $filterChain->type;
             $label .= '] ';
-            $label .= $objFilterChain->name;
+            $label .= $filterChain->name;
 
-            $GLOBALS['TL_LANG']['assetic']['chain:' . $objFilterChain->id] = $label;
+            $GLOBALS['TL_LANG']['assetic']['chain:' . $filterChain->id] = $label;
 
-            $options['chain']['chain:' . $objFilterChain->id] = $label;
+            $options['chain'][] = 'chain:' . $filterChain->id;
         }
 
-        $objFilter = \Database::getInstance()
+        $filter = \Database::getInstance()
             ->prepare('SELECT * FROM tl_assetic_filter WHERE id!=? ORDER BY type')
             ->execute($dc->id);
-        while ($objFilter->next()) {
-            if (!in_array($objFilter->type, $GLOBALS['ASSETIC']['css'])) {
+        while ($filter->next()) {
+            if (!in_array($filter->type,
+                          $GLOBALS['ASSETIC']['css'])
+            ) {
                 continue;
             }
 
-            $label = $GLOBALS['TL_LANG']['assetic'][$objFilter->type] ?: $objFilter->type;
+            $label = $GLOBALS['TL_LANG']['assetic'][$filter->type]
+                ? : $filter->type;
 
-            if ($objFilter->note) {
-                $label .= ' [' . $objFilter->note . ']';
+            if ($filter->note) {
+                $label .= ' [' . $filter->note . ']';
             }
 
-            $GLOBALS['TL_LANG']['assetic']['filter:' . $objFilter->id] = $label;
+            $GLOBALS['TL_LANG']['assetic']['filter:' . $filter->id] = $label;
 
-            $options['filter'][] = 'filter:' . $objFilter->id;
+            $options['filter'][] = 'filter:' . $filter->id;
         }
 
         return $options;

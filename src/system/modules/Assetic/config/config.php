@@ -25,7 +25,7 @@ $GLOBALS['BE_MOD']['system']['assetic_config'] = array(
 /**
  * Include assetic functions
  */
-require_once(TL_ROOT . '/system/modules/Assetic/vendor/Assetic/functions.php');
+require_once(TL_ROOT . '/system/modules/Assetic/vendor/assetic/src/functions.php');
 
 /**
  * Assetic compiler filter

@@ -33,6 +33,7 @@ $GLOBALS['TL_DCA']['tl_assetic_filter_chain'] = array
                 'id' => 'primary'
             )
         ),
+        'model' => 'Assetic\Model\FilterChainModel',
     ),
 
     // List

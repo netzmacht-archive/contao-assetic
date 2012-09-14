@@ -2,6 +2,9 @@
 
 namespace InfinitySoft\Assetic\DataContainer;
 
+use
+\Assetic\Model\FilterModel;
+
 class AsseticFilterChain
 {
     /**
@@ -36,22 +39,27 @@ class AsseticFilterChain
     {
         $options = array();
 
-        $objFilter = \Database::getInstance()
-            ->query('SELECT * FROM tl_assetic_filter ORDER BY type');
-        while ($objFilter->next()) {
-            if (!in_array($objFilter->type, $GLOBALS['ASSETIC'][$dc->activeRecord->type])) {
-                continue;
+        $filter = FilterModel::findAll(['order' => 'type']);
+
+        if ($filter) {
+            while ($filter->next()) {
+                if (!in_array($filter->type,
+                              $GLOBALS['ASSETIC'][$dc->activeRecord->type])
+                ) {
+                    continue;
+                }
+
+                $label = $GLOBALS['TL_LANG']['assetic'][$filter->type]
+                    ? : $filter->type;
+
+                if ($filter->note) {
+                    $label .= ' [' . $filter->note . ']';
+                }
+
+                $GLOBALS['TL_LANG']['assetic']['filter:' . $filter->id] = $label;
+
+                $options[] = 'filter:' . $filter->id;
             }
-
-            $label = $GLOBALS['TL_LANG']['assetic'][$objFilter->type] ?: $objFilter->type;
-
-            if ($objFilter->note) {
-                $label .= ' [' . $objFilter->note . ']';
-            }
-
-            $GLOBALS['TL_LANG']['assetic']['filter:' . $objFilter->id] = $label;
-
-            $options[] = 'filter:' . $objFilter->id;
         }
 
         return $options;
