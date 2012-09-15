@@ -35,63 +35,63 @@ $GLOBALS['ASSETIC']['compiler']['compass']     = 'Assetic\Filter\CompassFilter';
 $GLOBALS['ASSETIC']['compiler']['cssEmbed']    = 'Assetic\Filter\CssEmbedFilter';
 $GLOBALS['ASSETIC']['compiler']['cssImport']   = 'Assetic\Filter\CssImportFilter';
 $GLOBALS['ASSETIC']['compiler']['cssRewrite']  = 'Assetic\Filter\CssRewriteFilter';
-$GLOBALS['ASSETIC']['compiler']['gss']         = 'Assetic\Filter\GssFilter';
+// $GLOBALS['ASSETIC']['compiler']['gss']         = 'Assetic\Filter\GssFilter';
+// $GLOBALS['ASSETIC']['compiler']['handlebars']  = 'Assetic\Filter\HandlebarsFilter';
 $GLOBALS['ASSETIC']['compiler']['less']        = 'Assetic\Filter\LessFilter';
 $GLOBALS['ASSETIC']['compiler']['lessphp']     = 'Assetic\Filter\LessphpFilter';
-$GLOBALS['ASSETIC']['compiler']['phpCssEmbed'] = 'Assetic\Filter\PhpCssEmbedFilter';
-$GLOBALS['ASSETIC']['compiler']['scssphp']     = 'Assetic\Filter\ScssphpFilter';
+// $GLOBALS['ASSETIC']['compiler']['phpCssEmbed'] = 'Assetic\Filter\PhpCssEmbedFilter';
+// $GLOBALS['ASSETIC']['compiler']['scssphp']     = 'Assetic\Filter\ScssphpFilter';
 $GLOBALS['ASSETIC']['compiler']['stylus']      = 'Assetic\Filter\StylusFilter';
 $GLOBALS['ASSETIC']['compiler']['sass']        = 'Assetic\Filter\Sass\SassFilter';
 $GLOBALS['ASSETIC']['compiler']['scss']        = 'Assetic\Filter\Sass\ScssFilter';
-$GLOBALS['ASSETIC']['compiler']['handlebars']  = 'Assetic\Filter\HandlebarsFilter';
 
 /**
  * Assetic minimizer filter
  */
 $GLOBALS['ASSETIC']['minimizer']['cssMin']     = 'Assetic\Filter\CssMinFilter';
+// $GLOBALS['ASSETIC']['minimizer']['jsMin']      = 'Assetic\Filter\JSMinFilter';
+// $GLOBALS['ASSETIC']['minimizer']['jsMinPlus']  = 'Assetic\Filter\JSMinPlusFilter';
 $GLOBALS['ASSETIC']['minimizer']['packager']   = 'Assetic\Filter\PackagerFilter';
-$GLOBALS['ASSETIC']['minimizer']['uglifyCss']  = 'Assetic\Filter\UglifyCssFilter';
-$GLOBALS['ASSETIC']['minimizer']['jsMin']      = 'Assetic\Filter\JSMinFilter';
-$GLOBALS['ASSETIC']['minimizer']['jsMinPlus']  = 'Assetic\Filter\JSMinPlusFilter';
-$GLOBALS['ASSETIC']['minimizer']['packer']     = 'Assetic\Filter\PackerFilter';
-$GLOBALS['ASSETIC']['minimizer']['uglifyJs']   = 'Assetic\Filter\UglifyJsFilter';
-$GLOBALS['ASSETIC']['minimizer']['yuiCss']        = 'Assetic\Filter\Yui\CssCompressorFilter';
-$GLOBALS['ASSETIC']['minimizer']['yuiJs']        = 'Assetic\Filter\Yui\JsCompressorFilter';
+// $GLOBALS['ASSETIC']['minimizer']['packer']     = 'Assetic\Filter\PackerFilter';
+// $GLOBALS['ASSETIC']['minimizer']['uglifyCss']  = 'Assetic\Filter\UglifyCssFilter';
+// $GLOBALS['ASSETIC']['minimizer']['uglifyJs']   = 'Assetic\Filter\UglifyJsFilter';
 $GLOBALS['ASSETIC']['minimizer']['closureApi'] = 'Assetic\Filter\GoogleClosure\CompilerApiFilter';
 $GLOBALS['ASSETIC']['minimizer']['closureJar'] = 'Assetic\Filter\GoogleClosure\CompilerJarFilter';
+$GLOBALS['ASSETIC']['minimizer']['yuiCss']     = 'Assetic\Filter\Yui\CssCompressorFilter';
+$GLOBALS['ASSETIC']['minimizer']['yuiJs']      = 'Assetic\Filter\Yui\JsCompressorFilter';
 
 /**
  * Assetic css compatible filters
  */
-$GLOBALS['ASSETIC']['css'][] = 'coffee';
 $GLOBALS['ASSETIC']['css'][] = 'compass';
 $GLOBALS['ASSETIC']['css'][] = 'cssEmbed';
 $GLOBALS['ASSETIC']['css'][] = 'cssImport';
+$GLOBALS['ASSETIC']['css'][] = 'cssMin';
 $GLOBALS['ASSETIC']['css'][] = 'cssRewrite';
-$GLOBALS['ASSETIC']['css'][] = 'gss';
+// $GLOBALS['ASSETIC']['css'][] = 'gss';
 $GLOBALS['ASSETIC']['css'][] = 'less';
 $GLOBALS['ASSETIC']['css'][] = 'lessphp';
-$GLOBALS['ASSETIC']['css'][] = 'phpCssEmbed';
-$GLOBALS['ASSETIC']['css'][] = 'scssphp';
+// $GLOBALS['ASSETIC']['css'][] = 'phpCssEmbed';
+// $GLOBALS['ASSETIC']['css'][] = 'scssphp';
 $GLOBALS['ASSETIC']['css'][] = 'stylus';
+// $GLOBALS['ASSETIC']['css'][] = 'uglifyCss';
 $GLOBALS['ASSETIC']['css'][] = 'sass';
 $GLOBALS['ASSETIC']['css'][] = 'scss';
-$GLOBALS['ASSETIC']['css'][] = 'cssMin';
-$GLOBALS['ASSETIC']['css'][] = 'uglifyCss';
 $GLOBALS['ASSETIC']['css'][] = 'yuiCss';
 
 /**
  * Assetic js compatible filters
  */
-$GLOBALS['ASSETIC']['js'][] = 'handlebars';
+$GLOBALS['ASSETIC']['js'][] = 'coffee';
+// $GLOBALS['ASSETIC']['js'][] = 'handlebars';
+// $GLOBALS['ASSETIC']['js'][] = 'jsMin';
+// $GLOBALS['ASSETIC']['js'][] = 'jsMinPlus';
 $GLOBALS['ASSETIC']['js'][] = 'packager';
-$GLOBALS['ASSETIC']['js'][] = 'jsMin';
-$GLOBALS['ASSETIC']['js'][] = 'jsMinPlus';
-$GLOBALS['ASSETIC']['js'][] = 'packer';
-$GLOBALS['ASSETIC']['js'][] = 'uglifyJs';
-$GLOBALS['ASSETIC']['js'][] = 'yuiJs';
+// $GLOBALS['ASSETIC']['js'][] = 'packer';
+// $GLOBALS['ASSETIC']['js'][] = 'uglifyJs';
 $GLOBALS['ASSETIC']['js'][] = 'closureApi';
 $GLOBALS['ASSETIC']['js'][] = 'closureJar';
+$GLOBALS['ASSETIC']['js'][] = 'yuiJs';
 
 
 /**

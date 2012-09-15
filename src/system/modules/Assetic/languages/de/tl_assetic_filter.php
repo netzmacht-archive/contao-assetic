@@ -20,6 +20,8 @@ $GLOBALS['TL_LANG']['tl_assetic_filter']['note']           = array('Notiz',
                                                                    'Geben Sie hier eine kurze Notiz ein, damit Sie den Filter hinterher leichter identifizieren können.');
 $GLOBALS['TL_LANG']['tl_assetic_filter']['disabled']       = array('Deaktiviert',
                                                                    'Den Filter deaktivieren, damit wird er bei der Verarbeitung ignoriert ohne das man ihn aus der Chain entfernen muss.');
+$GLOBALS['TL_LANG']['tl_assetic_filter']['notInDebug']     = array('nicht im Debug Modus',
+                                                                   'Der Filter wird im Debug Modus deaktiviert.');
 $GLOBALS['TL_LANG']['tl_assetic_filter']['nodePath']       = array('node Executeable',
                                                                    'Geben Sie hier den Pfad zur <code>node</code> Executeable an (Standard: /usr/bin/node).');
 $GLOBALS['TL_LANG']['tl_assetic_filter']['nodePaths']      = array('Node Include Pfade',

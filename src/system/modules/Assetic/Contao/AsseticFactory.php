@@ -13,6 +13,10 @@
 
 namespace InfinitySoft\Assetic\Contao;
 
+use Assetic\Model\FilterModel;
+use Assetic\Model\FilterChainModel;
+use Assetic\Filter\FilterCollection;
+
 class AsseticFactory
 {
     /**
@@ -32,34 +36,62 @@ class AsseticFactory
         static::$filterFactories[] = $filterFactory;
     }
 
-    public static function createFilterOrChain($id)
+    public static function getFilterFactories()
     {
-        list($type, $id) = explode(':', $id);
-        
-        switch ($type)
-        {
-            case 'filter':
-                return static::createFilterById($id);
-            
-            case 'chain':
-                return static::createFilterChainById($id);
+        if (!count(static::$filterFactories)) {
+            static::$filterFactories[] = new DefaultFilterFactory();
         }
-        
-        return null;
+
+        return static::$filterFactories;
     }
-    
+
+    public static function createFilterOrChain($id, $debug = null)
+    {
+        list($type, $id) = explode(':',
+                                   $id);
+
+        switch ($type) {
+            case 'filter':
+                $filter = static::createFilterById($id,
+                                                   $debug);
+                if ($filter) {
+                    return new FilterCollection(array($filter));
+                }
+                break;
+
+            case 'chain':
+                $chain = static::createFilterChainById($id,
+                                                       $debug);
+                if ($chain) {
+                    return $chain;
+                }
+                break;
+        }
+
+        return new FilterCollection();
+    }
+
     /**
      * @param int $id
      *
      * @return \Assetic\Filter\FilterInterface|null
      */
-    public static function createFilterById($id)
+    public static function createFilterById($id, $debug = null)
     {
-        $filter = \Database::getInstance()
-            ->prepare('SELECT * FROM tl_assetic_filter WHERE id=? AND disabled=?')
-            ->execute($id, '');
+        if ($debug === null) {
+            $debug = $GLOBALS['TL_CONFIG']['debugMode'];
+        }
 
-        if ($filter->next()) {
+        $options = array();
+        if ($debug) {
+            $options['column'] = 'notInDebug=?';
+            $options['value']  = '';
+        }
+
+        $filter = FilterModel::findActiveByPk($id,
+                                              $options);
+
+        if ($filter) {
             return static::createFilter($filter->row());
         }
 
@@ -73,8 +105,7 @@ class AsseticFactory
      */
     public static function createFilter(array $filterConfig)
     {
-        foreach (static::filterFactories as $filterFactory)
-        {
+        foreach (static::getFilterFactories() as $filterFactory) {
             $filter = $filterFactory->createFilter($filterConfig);
 
             if ($filter) {
@@ -90,14 +121,13 @@ class AsseticFactory
      *
      * @return \Assetic\Filter\FilterCollection|null
      */
-    public static function createFilterChainById($id)
+    public static function createFilterChainById($id, $debug = null)
     {
-        $chain = \Database::getInstance()
-            ->prepare('SELECT * FROM tl_assetic_filter_chain WHERE id=? AND disabled=?')
-            ->execute($id, '');
+        $chain = FilterChainModel::findActiveByPk($id);
 
-        if ($chain->next()) {
-            return static::createFilterChain($chain->row());
+        if ($chain) {
+            return static::createFilterChain($chain->row(),
+                                             $debug);
         }
 
         return null;
@@ -108,14 +138,16 @@ class AsseticFactory
      *
      * @return \Assetic\Filter\FilterCollection|null
      */
-    public static function createFilterChain(array $chainConfig)
+    public static function createFilterChain(array $chainConfig, $debug = null)
     {
-        $chainConfig['filters'] = deserialize($chainConfig['filters'], true);
+        $chainConfig['filters'] = deserialize($chainConfig['filters'],
+                                              true);
 
         $filters = array();
 
         foreach ($chainConfig['filters'] as $id) {
-            $filter = static::createFilterById($id);
+            $filter = static::createFilterOrChain($id,
+                                                  $debug);
 
             if ($filter) {
                 $filters[] = $filter;

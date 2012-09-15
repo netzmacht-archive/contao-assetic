@@ -25,4 +25,31 @@ class FilterModel extends \Model
 	 */
 	protected static $strTable = 'tl_assetic_filter';
 
+    public static function findActiveByPk($varValue, array $arrOptions = array())
+    {
+        $arrOptions['limit'] = 1;
+
+        if (!isset($arrOptions['column'])) {
+            $arrOptions['column'] = array();
+        }
+        else if (!is_array($arrOptions['column'])) {
+            $arrOptions['column'] = array($arrOptions['column']);
+        }
+        $arrOptions['column'][] = static::$strTable . '.' . static::$strPk . '=?';
+        $arrOptions['column'][] = static::$strTable . '.disabled=?';
+
+        if (!isset($arrOptions['value'])) {
+            $arrOptions['value'] = array();
+        }
+        else if (!is_array($arrOptions['value'])) {
+            $arrOptions['value'] = array($arrOptions['value']);
+        }
+        $arrOptions['value'][] = $varValue;
+        $arrOptions['value'][] = '';
+
+        $arrOptions['return'] = 'Model';
+
+		return static::find($arrOptions);
+    }
+
 }

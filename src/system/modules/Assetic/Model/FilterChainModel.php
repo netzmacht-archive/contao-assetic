@@ -25,4 +25,16 @@ class FilterChainModel extends \Model
 	 */
 	protected static $strTable = 'tl_assetic_filter_chain';
 
+    public static function findActiveByPk($varValue, array $arrOptions = array())
+    {
+        $arrOptions['limit'] = 1;
+        $arrOptions['column'][] = static::$strTable . '.' . static::$strPk . '=?';
+        $arrOptions['column'][] = static::$strTable . '.disabled=?';
+        $arrOptions['value'][] = $varValue;
+        $arrOptions['value'][] = '';
+        $arrOptions['return'] = 'Model';
+
+		return static::find($arrOptions);
+    }
+
 }

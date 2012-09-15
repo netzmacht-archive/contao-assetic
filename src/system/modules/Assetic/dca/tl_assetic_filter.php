@@ -33,7 +33,7 @@ $GLOBALS['TL_DCA']['tl_assetic_filter'] = array
                 'id' => 'primary'
             )
         ),
-        'model' => 'Assetic\Model\FilterModel',
+        'model'            => 'Assetic\Model\FilterModel',
     ),
 
     // List
@@ -100,121 +100,117 @@ $GLOBALS['TL_DCA']['tl_assetic_filter'] = array
         'coffee'               => array(
             'filter' => array('type', 'note'),
             'coffee' => array('coffeePath', 'nodePath'),
-            'status' => array('disabled'),
+            'status' => array('disabled', 'notInDebug'),
         ),
         'compass'              => array(
             'filter'  => array('type', 'note'),
             'compass' => array('compassPath', 'rubyPath'),
-            'status'  => array('disabled'),
+            'status'  => array('disabled', 'notInDebug'),
         ),
         'cssEmbed'             => array(
             'filter'   => array('type', 'note'),
             'cssEmbed' => array('cssEmbedPath', 'javaPath'),
-            'status'   => array('disabled'),
+            'status'   => array('disabled', 'notInDebug'),
         ),
         'cssImport'            => array(
             'filter'    => array('type', 'note'),
             'cssImport' => array('importFilter'),
-            'status'    => array('disabled'),
+            'status'    => array('disabled', 'notInDebug'),
         ),
         'cssMin'               => array(
             'filter' => array('type', 'note'),
-            'status' => array('disabled'),
+            'status' => array('disabled', 'notInDebug'),
         ),
         'cssRewrite'           => array(
             'filter' => array('type', 'note'),
-            'status' => array('disabled'),
+            'status' => array('disabled', 'notInDebug'),
         ),
         'gss'                  => array(
             'filter' => array('type', 'note'),
             'gss'    => array('gssPath', 'javaPath'),
-            'status' => array('disabled'),
-        ),
-        'less'                 => array(
-            'filter'  => array('type', 'note'),
-            'less'    => array('nodePath', 'nodePaths'),
-            'status'  => array('disabled'),
-        ),
-        'lessphp'              => array(
-            'filter' => array('type', 'note'),
-            'status' => array('disabled'),
-        ),
-        'packager'             => array(
-            'filter' => array('type', 'note'),
-            'status' => array('disabled'),
-        ),
-        'phpCssEmbed'          => array(
-            'filter' => array('type', 'note'),
-            'status' => array('disabled'),
-        ),
-        'scssphp'              => array(
-            'filter' => array('type', 'note'),
-            'status' => array('disabled'),
-        ),
-        'stylus'               => array(
-            'filter' => array('type', 'note'),
-            'stylus' => array('nodePath', 'nodePaths'),
-            'status' => array('disabled'),
-        ),
-        'uglifyCss'            => array(
-            'filter'    => array('type', 'note'),
-            'uglifyCss' => array('uglifyCssPath', 'nodePath'),
-            'status'    => array('disabled'),
+            'status' => array('disabled', 'notInDebug'),
         ),
         'handlebars'           => array(
             'filter'     => array('type', 'note'),
             'handlebars' => array('handlebarsPath', 'nodePath'),
-            'status'     => array('disabled'),
+            'status'     => array('disabled', 'notInDebug'),
         ),
         'jsMin'                => array(
             'filter' => array('type', 'note'),
-            'status' => array('disabled'),
+            'status' => array('disabled', 'notInDebug'),
         ),
         'jsMinPlus'            => array(
             'filter' => array('type', 'note'),
-            'status' => array('disabled'),
+            'status' => array('disabled', 'notInDebug'),
+        ),
+        'less'                 => array(
+            'filter'  => array('type', 'note'),
+            'less'    => array('nodePath', 'nodePaths'),
+            'status'  => array('disabled', 'notInDebug'),
+        ),
+        'lessphp'              => array(
+            'filter' => array('type', 'note'),
+            'status' => array('disabled', 'notInDebug'),
         ),
         'packager'             => array(
             'filter' => array('type', 'note'),
-            'status' => array('disabled'),
+            'status' => array('disabled', 'notInDebug'),
         ),
         'packer'               => array(
             'filter' => array('type', 'note'),
-            'status' => array('disabled'),
+            'status' => array('disabled', 'notInDebug'),
+        ),
+        'phpCssEmbed'          => array(
+            'filter' => array('type', 'note'),
+            'status' => array('disabled', 'notInDebug'),
+        ),
+        'scssphp'              => array(
+            'filter' => array('type', 'note'),
+            'status' => array('disabled', 'notInDebug'),
+        ),
+        'stylus'               => array(
+            'filter' => array('type', 'note'),
+            'stylus' => array('nodePath', 'nodePaths'),
+            'status' => array('disabled', 'notInDebug'),
+        ),
+        'uglifyCss'            => array(
+            'filter'    => array('type', 'note'),
+            'uglifyCss' => array('uglifyCssPath', 'nodePath'),
+            'status'    => array('disabled', 'notInDebug'),
         ),
         'uglifyJs'             => array(
             'filter'   => array('type', 'note'),
             'uglifyJs' => array('uglifyJsPath', 'nodePath'),
-            'status'   => array('disabled'),
-        ),
-        'yuiCss'               => array(
-            'filter'   => array('type', 'note'),
-            'uglifyJs' => array('yuiPath', 'javaPath'),
-            'status'   => array('disabled'),
-        ),
-        'yuiJs'                => array(
-            'filter'   => array('type', 'note'),
-            'uglifyJs' => array('yuiPath', 'javaPath'),
-            'status'   => array('disabled'),
-        ),
-        'sass'                 => array(
-            'filter'   => array('type', 'note'),
-            'uglifyJs' => array('sassPath', 'rubyPath'),
-            'status'   => array('disabled'),
-        ),
-        'scss'                 => array(
-            'filter'   => array('type', 'note'),
-            'uglifyJs' => array('sassPath', 'rubyPath'),
-            'status'   => array('disabled'),
+            'status'   => array('disabled', 'notInDebug'),
         ),
         'closureApi'           => array(
             'filter'   => array('type', 'note'),
-            'status'   => array('disabled'),
+            'status'   => array('disabled', 'notInDebug'),
         ),
         'closureJar'           => array(
             'filter'   => array('type', 'note'),
-            'uglifyJs' => array('closurePath', 'javaPath'),
-            'status'   => array('disabled'),
+            'closure'  => array('closurePath', 'javaPath'),
+            'status'   => array('disabled', 'notInDebug'),
+        ),
+        'sass'                 => array(
+            'filter'   => array('type', 'note'),
+            'sass'     => array('sassPath', 'rubyPath'),
+            'status'   => array('disabled', 'notInDebug'),
+        ),
+        'scss'                 => array(
+            'filter'   => array('type', 'note'),
+            'scss'     => array('sassPath', 'rubyPath'),
+            'status'   => array('disabled', 'notInDebug'),
+        ),
+        'yuiCss'               => array(
+            'filter'   => array('type', 'note'),
+            'yui'      => array('yuiPath', 'javaPath'),
+            'status'   => array('disabled', 'notInDebug'),
+        ),
+        'yuiJs'                => array(
+            'filter'   => array('type', 'note'),
+            'yui'      => array('yuiPath', 'javaPath'),
+            'status'   => array('disabled', 'notInDebug'),
         ),
     ),
 
@@ -259,6 +255,17 @@ $GLOBALS['TL_DCA']['tl_assetic_filter'] = array
         'disabled'                 => array
         (
             'label'     => &$GLOBALS['TL_LANG']['tl_assetic_filter']['disabled'],
+            'inputType' => 'checkbox',
+            'exclude'   => true,
+            'sorting'   => true,
+            'flag'      => 1,
+            'filter'    => true,
+            'eval'      => array('tl_class'  => 'w50'),
+            'sql'       => "char(1) NOT NULL default ''"
+        ),
+        'notInDebug'                 => array
+        (
+            'label'     => &$GLOBALS['TL_LANG']['tl_assetic_filter']['notInDebug'],
             'inputType' => 'checkbox',
             'exclude'   => true,
             'sorting'   => true,
@@ -446,8 +453,7 @@ $GLOBALS['TL_DCA']['tl_assetic_filter'] = array
             'label'     => &$GLOBALS['TL_LANG']['tl_assetic_filter']['sassPath'],
             'inputType' => 'text',
             'exclude'   => true,
-            'eval'      => array('mandatory' => true,
-                                 'maxlength' => 255,
+            'eval'      => array('maxlength' => 255,
                                  'tl_class'  => 'w50'),
             'sql'       => "varchar(255) NOT NULL default ''",
         ),
