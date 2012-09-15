@@ -1,6 +1,11 @@
 Assetic management for Contao
 =============================
 
+Dependencies
+------------
+
+* Assetic https://github.com/kriswallsmith/assetic
+* Symfony Process for Contao https://github.com/InfinitySoft/contao-SymfonyProcess
 
 Attribution
 -----------
