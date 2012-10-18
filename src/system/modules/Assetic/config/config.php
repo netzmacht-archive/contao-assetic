@@ -13,6 +13,12 @@
 
 
 /**
+ * Models
+ */
+$GLOBALS['TL_MODELS']['tl_assetic_filter']       = 'Assetic\Model\FilterModel';
+$GLOBALS['TL_MODELS']['tl_assetic_filter_chain'] = 'Assetic\Model\FilterChainModel';
+
+/**
  * Back end modules
  */
 $GLOBALS['BE_MOD']['system']['assetic_config'] = array(
