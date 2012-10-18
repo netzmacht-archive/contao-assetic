@@ -2,8 +2,8 @@
 
 namespace InfinitySoft\Assetic\DataContainer;
 
-use
-\Assetic\Model\FilterModel;
+use Assetic\Model\FilterModel;
+use Assetic\Contao\AsseticFactory;
 
 class AsseticFilterChain
 {
@@ -33,6 +33,31 @@ class AsseticFilterChain
      */
     protected function __construct()
     {
+    }
+
+    public function listChain($row, $label, $dc, $fields)
+    {
+        $label .= '<br>&nbsp;&nbsp;&nbsp;';
+
+        $filters = deserialize($row['filters'], true);
+
+        foreach ($filters as $key) {
+            list($type, $id) = explode(':', $key, 2);
+            $filter = FilterModel::findByPk($id);
+            if ($filter) {
+                $label .= '&rarr; ';
+                $label .= $GLOBALS['TL_LANG']['assetic'][$filter->type]
+                    ? : $filter->type;
+                if ($filter->note) {
+                    $label .= ' [' . $filter->note . ']';
+                }
+                $label .= ' ';
+            }
+        }
+
+        $label = '<div style="padding: 4px 0;">' . $label . '</div>';
+
+        return $label;
     }
 
     public function getFilterOptions($dc)

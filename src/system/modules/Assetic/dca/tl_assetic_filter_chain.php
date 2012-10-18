@@ -47,8 +47,9 @@ $GLOBALS['TL_DCA']['tl_assetic_filter_chain'] = array
         ),
         'label'             => array
         (
-            'fields' => array('type', 'name'),
-            'format' => '[%s] %s',
+            'fields'         => array('type', 'name'),
+            'format'         => '[%s] %s',
+            'label_callback' => array('Assetic\DataContainer\AsseticFilterChain', 'listChain'),
         ),
         'global_operations' => array
         (
