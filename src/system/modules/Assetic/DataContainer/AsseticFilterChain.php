@@ -64,7 +64,7 @@ class AsseticFilterChain
     {
         $options = array();
 
-        $filter = FilterModel::findAll(['order' => 'type']);
+        $filter = FilterModel::findAll(array('order' => 'type'));
 
         if ($filter) {
             while ($filter->next()) {

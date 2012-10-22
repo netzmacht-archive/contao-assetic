@@ -54,7 +54,7 @@ class AsseticFilter
 
         $filterChain = FilterChainModel::findBy('type',
                                                 'css',
-                                                ['order' => 'type']);
+                                                array('order' => 'type'));
         while ($filterChain->next()) {
             $label = '[';
             $label .= $GLOBALS['TL_LANG']['tl_assetic_filter_chain']['types'][$filterChain->type]
