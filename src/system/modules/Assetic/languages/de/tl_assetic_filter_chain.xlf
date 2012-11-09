@@ -1,0 +1,95 @@
+<?xml version="1.0"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file original="system/modules/Assetic/languages/de/tl_assetic_filter_chain.php" source-language="de" datatype="php" date="2012-10-22T13:01:00+00:00" target-language="de">
+    <body>
+      <trans-unit id="tl_assetic_filter_chain.type.0">
+        <source xml:lang="de">Anwendbar auf</source>
+        <target xml:lang="de">Anwendbar auf</target>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter_chain.type.1">
+        <source xml:lang="de">W&#xE4;hlen Sie hier auf welche Assets diese Chain anwendbar sein soll.</source>
+        <target xml:lang="de">W&#xE4;hlen Sie hier auf welche Assets diese Chain anwendbar sein soll.</target>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter_chain.name.0">
+        <source xml:lang="de">Name</source>
+        <target xml:lang="de">Name</target>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter_chain.name.1">
+        <source xml:lang="de">Geben Sie hier einen Namen f&#xFC;r die Chain ein.</source>
+        <target xml:lang="de">Geben Sie hier einen Namen f&#xFC;r die Chain ein.</target>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter_chain.filters.0">
+        <source xml:lang="de">Filter</source>
+        <target xml:lang="de">Filter</target>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter_chain.filters.1">
+        <source xml:lang="de">W&#xE4;hlen Sie hier die aktiven Filter dieser Chain und ihre Reihenfolge aus.</source>
+        <target xml:lang="de">W&#xE4;hlen Sie hier die aktiven Filter dieser Chain und ihre Reihenfolge aus.</target>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter_chain.disabled.0">
+        <source xml:lang="de">Deaktiviert</source>
+        <target xml:lang="de">Deaktiviert</target>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter_chain.disabled.1">
+        <source xml:lang="de">Die Chain deaktivieren, damit wird er bei der Verarbeitung ignoriert ohne das man sie entfernen muss.</source>
+        <target xml:lang="de">Die Chain deaktivieren, damit wird er bei der Verarbeitung ignoriert ohne das man sie entfernen muss.</target>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter_chain.tstamp.0">
+        <source xml:lang="de">&#xC4;nderungsdatum</source>
+        <target xml:lang="de">&#xC4;nderungsdatum</target>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter_chain.tstamp.1">
+        <source xml:lang="de">Datum und Uhrzeit der letzten &#xC4;nderung</source>
+        <target xml:lang="de">Datum und Uhrzeit der letzten &#xC4;nderung</target>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter_chain.filter_legend">
+        <source xml:lang="de">Filter</source>
+        <target xml:lang="de">Filter</target>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter_chain.chain_legend">
+        <source xml:lang="de">Chain</source>
+        <target xml:lang="de">Chain</target>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter_chain.types.css">
+        <source xml:lang="de">CSS</source>
+        <target xml:lang="de">CSS</target>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter_chain.types.js">
+        <source xml:lang="de">JS</source>
+        <target xml:lang="de">JS</target>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter_chain.new.0">
+        <source xml:lang="de">Neue Chain</source>
+        <target xml:lang="de">Neue Chain</target>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter_chain.new.1">
+        <source xml:lang="de">Eine neue Chain anlegen</source>
+        <target xml:lang="de">Eine neue Chain anlegen</target>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter_chain.show.0">
+        <source xml:lang="de">Chaindetails</source>
+        <target xml:lang="de">Chaindetails</target>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter_chain.show.1">
+        <source xml:lang="de">Details der Chain ID %s anzeigen</source>
+        <target xml:lang="de">Details der Chain ID %s anzeigen</target>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter_chain.edit.0">
+        <source xml:lang="de">Chain bearbeiten</source>
+        <target xml:lang="de">Chain bearbeiten</target>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter_chain.edit.1">
+        <source xml:lang="de">Chain ID %s bearbeiten</source>
+        <target xml:lang="de">Chain ID %s bearbeiten</target>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter_chain.delete.0">
+        <source xml:lang="de">Chain l&#xF6;schen</source>
+        <target xml:lang="de">Chain l&#xF6;schen</target>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter_chain.delete.1">
+        <source xml:lang="de">Chain ID %s l&#xF6;schen</source>
+        <target xml:lang="de">Chain ID %s l&#xF6;schen</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

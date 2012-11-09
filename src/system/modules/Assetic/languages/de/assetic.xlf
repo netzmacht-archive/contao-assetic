@@ -1,0 +1,139 @@
+<?xml version="1.0"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file original="system/modules/Assetic/languages/de/assetic.php" source-language="de" datatype="php" date="2012-10-22T13:01:00+00:00" target-language="de">
+    <body>
+      <trans-unit id="assetic.filter">
+        <source xml:lang="de">Filter</source>
+        <target xml:lang="de">Filter</target>
+      </trans-unit>
+      <trans-unit id="assetic.chain">
+        <source xml:lang="de">Chain</source>
+        <target xml:lang="de">Chain</target>
+      </trans-unit>
+      <trans-unit id="assetic.compiler">
+        <source xml:lang="de">Preprocessor</source>
+        <target xml:lang="de">Preprocessor</target>
+      </trans-unit>
+      <trans-unit id="assetic.minimizer">
+        <source xml:lang="de">Komprimierer</source>
+        <target xml:lang="de">Komprimierer</target>
+      </trans-unit>
+      <trans-unit id="assetic.coffee">
+        <source xml:lang="de">CoffeeScript (JS)</source>
+        <target xml:lang="de">CoffeeScript (JS)</target>
+      </trans-unit>
+      <trans-unit id="assetic.compass">
+        <source xml:lang="de">Compass (CSS)</source>
+        <target xml:lang="de">Compass (CSS)</target>
+      </trans-unit>
+      <trans-unit id="assetic.cssEmbed">
+        <source xml:lang="de">CSS Embed (CSS)</source>
+        <target xml:lang="de">CSS Embed (CSS)</target>
+      </trans-unit>
+      <trans-unit id="assetic.cssImport">
+        <source xml:lang="de">CSS Import (CSS)</source>
+        <target xml:lang="de">CSS Import (CSS)</target>
+      </trans-unit>
+      <trans-unit id="assetic.cssMin">
+        <source xml:lang="de">CSS Min (CSS)</source>
+        <target xml:lang="de">CSS Min (CSS)</target>
+      </trans-unit>
+      <trans-unit id="assetic.cssRewrite">
+        <source xml:lang="de">CSS Rewrite (CSS)</source>
+        <target xml:lang="de">CSS Rewrite (CSS)</target>
+      </trans-unit>
+      <trans-unit id="assetic.gss">
+        <source xml:lang="de">GSS (CSS)</source>
+        <target xml:lang="de">GSS (CSS)</target>
+      </trans-unit>
+      <trans-unit id="assetic.less">
+        <source xml:lang="de">Less (CSS)</source>
+        <target xml:lang="de">Less (CSS)</target>
+      </trans-unit>
+      <trans-unit id="assetic.lessphp">
+        <source xml:lang="de">Lessphp (CSS)</source>
+        <target xml:lang="de">Lessphp (CSS)</target>
+      </trans-unit>
+      <trans-unit id="assetic.packager">
+        <source xml:lang="de">Packager (JS)</source>
+        <target xml:lang="de">Packager (JS)</target>
+      </trans-unit>
+      <trans-unit id="assetic.phpCssEmbed">
+        <source xml:lang="de">PHP CSS Embed (CSS)</source>
+        <target xml:lang="de">PHP CSS Embed (CSS)</target>
+      </trans-unit>
+      <trans-unit id="assetic.scssphp">
+        <source xml:lang="de">SCSS PHP (CSS)</source>
+        <target xml:lang="de">SCSS PHP (CSS)</target>
+      </trans-unit>
+      <trans-unit id="assetic.stylus">
+        <source xml:lang="de">Stylus (CSS)</source>
+        <target xml:lang="de">Stylus (CSS)</target>
+      </trans-unit>
+      <trans-unit id="assetic.uglifyCss">
+        <source xml:lang="de">Uglify CSS (CSS)</source>
+        <target xml:lang="de">Uglify CSS (CSS)</target>
+      </trans-unit>
+      <trans-unit id="assetic.sass">
+        <source xml:lang="de">Sass (CSS)</source>
+        <target xml:lang="de">Sass (CSS)</target>
+      </trans-unit>
+      <trans-unit id="assetic.scss">
+        <source xml:lang="de">Scss (CSS)</source>
+        <target xml:lang="de">Scss (CSS)</target>
+      </trans-unit>
+      <trans-unit id="assetic.handlebars">
+        <source xml:lang="de">Handlebars (JS)</source>
+        <target xml:lang="de">Handlebars (JS)</target>
+      </trans-unit>
+      <trans-unit id="assetic.jsMin">
+        <source xml:lang="de">JS Min (JS)</source>
+        <target xml:lang="de">JS Min (JS)</target>
+      </trans-unit>
+      <trans-unit id="assetic.jsMinPlus">
+        <source xml:lang="de">JS Min+ (JS)</source>
+        <target xml:lang="de">JS Min+ (JS)</target>
+      </trans-unit>
+      <trans-unit id="assetic.packer">
+        <source xml:lang="de">Packer (JS)</source>
+        <target xml:lang="de">Packer (JS)</target>
+      </trans-unit>
+      <trans-unit id="assetic.uglifyJs">
+        <source xml:lang="de">Uglify JS (JS)</source>
+        <target xml:lang="de">Uglify JS (JS)</target>
+      </trans-unit>
+      <trans-unit id="assetic.yuiCss">
+        <source xml:lang="de">Yui Compressor (CSS)</source>
+        <target xml:lang="de">Yui Compressor (CSS)</target>
+      </trans-unit>
+      <trans-unit id="assetic.yuiJs">
+        <source xml:lang="de">Yui Compressor (JS)</source>
+        <target xml:lang="de">Yui Compressor (JS)</target>
+      </trans-unit>
+      <trans-unit id="assetic.closureApi">
+        <source xml:lang="de">GoogleClosure Api (JS)</source>
+        <target xml:lang="de">GoogleClosure Api (JS)</target>
+      </trans-unit>
+      <trans-unit id="assetic.closureJar">
+        <source xml:lang="de">GoogleClosure (JS)</source>
+        <target xml:lang="de">GoogleClosure (JS)</target>
+      </trans-unit>
+      <trans-unit id="assetic.img.jpegoptim">
+        <source xml:lang="de">Jpegoptim</source>
+        <target xml:lang="de">Jpegoptim</target>
+      </trans-unit>
+      <trans-unit id="assetic.img.jpegtran">
+        <source xml:lang="de">Jpegtran</source>
+        <target xml:lang="de">Jpegtran</target>
+      </trans-unit>
+      <trans-unit id="assetic.img.optiPng">
+        <source xml:lang="de">OptiPng</source>
+        <target xml:lang="de">OptiPng</target>
+      </trans-unit>
+      <trans-unit id="assetic.img.pngout">
+        <source xml:lang="de">Pngout</source>
+        <target xml:lang="de">Pngout</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

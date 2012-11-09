@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file original="system/modules/Assetic/languages/de/modules.php" source-language="de" datatype="php" date="2012-11-09T20:21:42+00:00" target-language="de">
+    <body>
+      <trans-unit id="MOD.assetic_config.0">
+        <source xml:lang="de">Assetic</source>
+        <target xml:lang="de">Assetic</target>
+      </trans-unit>
+      <trans-unit id="MOD.assetic_config.1">
+        <source xml:lang="de">Assetic Management konfigurieren</source>
+        <target xml:lang="de">Assetic Management konfigurieren</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file original="system/modules/Assetic/languages/de/tl_assetic_config.php" source-language="de" datatype="php" date="2012-10-22T13:01:00+00:00" target-language="de">
+    <body>
+      <trans-unit id="tl_assetic_config.headline">
+        <source xml:lang="de">Assetic</source>
+        <target xml:lang="de">Assetic</target>
+      </trans-unit>
+      <trans-unit id="tl_assetic_config.assets">
+        <source xml:lang="de">Assets</source>
+        <target xml:lang="de">Assets</target>
+      </trans-unit>
+      <trans-unit id="tl_assetic_config.filter.0">
+        <source xml:lang="de">Filter</source>
+        <target xml:lang="de">Filter</target>
+      </trans-unit>
+      <trans-unit id="tl_assetic_config.filter.1">
+        <source xml:lang="de">Definieren und konfigurieren von Asset Filtern.</source>
+        <target xml:lang="de">Definieren und konfigurieren von Asset Filtern.</target>
+      </trans-unit>
+      <trans-unit id="tl_assetic_config.filterChain.0">
+        <source xml:lang="de">Filter Chain</source>
+        <target xml:lang="de">Filter Chain</target>
+      </trans-unit>
+      <trans-unit id="tl_assetic_config.filterChain.1">
+        <source xml:lang="de">Definieren von Filter Chains aus einem oder mehreren Filtern.</source>
+        <target xml:lang="de">Definieren von Filter Chains aus einem oder mehreren Filtern.</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

@@ -1,0 +1,295 @@
+<?xml version="1.0"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file original="system/modules/Assetic/languages/de/tl_assetic_filter.php" source-language="de" datatype="php" date="2012-10-22T13:01:00+00:00" target-language="de">
+    <body>
+      <trans-unit id="tl_assetic_filter.type.0">
+        <source xml:lang="de">Typ</source>
+        <target xml:lang="de">Typ</target>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter.type.1">
+        <source xml:lang="de">W&#xE4;hlen Sie hier den Filter Typ aus.</source>
+        <target xml:lang="de">W&#xE4;hlen Sie hier den Filter Typ aus.</target>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter.note.0">
+        <source xml:lang="de">Notiz</source>
+        <target xml:lang="de">Notiz</target>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter.note.1">
+        <source xml:lang="de">Geben Sie hier eine kurze Notiz ein, damit Sie den Filter hinterher leichter identifizieren k&#xF6;nnen.</source>
+        <target xml:lang="de">Geben Sie hier eine kurze Notiz ein, damit Sie den Filter hinterher leichter identifizieren k&#xF6;nnen.</target>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter.disabled.0">
+        <source xml:lang="de">Deaktiviert</source>
+        <target xml:lang="de">Deaktiviert</target>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter.disabled.1">
+        <source xml:lang="de">Den Filter deaktivieren, damit wird er bei der Verarbeitung ignoriert ohne das man ihn aus der Chain entfernen muss.</source>
+        <target xml:lang="de">Den Filter deaktivieren, damit wird er bei der Verarbeitung ignoriert ohne das man ihn aus der Chain entfernen muss.</target>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter.notInDebug.0">
+        <source xml:lang="de">nicht im Debug Modus</source>
+        <target xml:lang="de">nicht im Debug Modus</target>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter.notInDebug.1">
+        <source xml:lang="de">Der Filter wird im Debug Modus deaktiviert.</source>
+        <target xml:lang="de">Der Filter wird im Debug Modus deaktiviert.</target>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter.nodePath.0">
+        <source xml:lang="de">node Executeable</source>
+        <target xml:lang="de">node Executeable</target>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter.nodePath.1">
+        <source xml:lang="de">Geben Sie hier den Pfad zur &lt;code&gt;node&lt;/code&gt; Executeable an (Standard: /usr/bin/node).</source>
+        <target xml:lang="de">Geben Sie hier den Pfad zur &lt;code&gt;node&lt;/code&gt; Executeable an (Standard: /usr/bin/node).</target>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter.nodePaths.0">
+        <source xml:lang="de">Node Include Pfade</source>
+        <target xml:lang="de">Node Include Pfade</target>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter.nodePaths.1">
+        <source xml:lang="de">Geben Sie hier ein oder mehrere Node Include Pfade an.</source>
+        <target xml:lang="de">Geben Sie hier ein oder mehrere Node Include Pfade an.</target>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter.rubyPath.0">
+        <source xml:lang="de">ruby Executeable</source>
+        <target xml:lang="de">ruby Executeable</target>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter.rubyPath.1">
+        <source xml:lang="de">Geben Sie hier den Pfad zur &lt;code&gt;ruby&lt;/code&gt; Executeable an (Standard: null).</source>
+        <target xml:lang="de">Geben Sie hier den Pfad zur &lt;code&gt;ruby&lt;/code&gt; Executeable an (Standard: null).</target>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter.javaPath.0">
+        <source xml:lang="de">java Executeable</source>
+        <target xml:lang="de">java Executeable</target>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter.javaPath.1">
+        <source xml:lang="de">Geben Sie hier den Pfad zur &lt;code&gt;java&lt;/code&gt; Executeable an (Standard: /usr/bin/java).</source>
+        <target xml:lang="de">Geben Sie hier den Pfad zur &lt;code&gt;java&lt;/code&gt; Executeable an (Standard: /usr/bin/java).</target>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter.coffeePath.0">
+        <source xml:lang="de">CoffeScript Executeable</source>
+        <target xml:lang="de">CoffeScript Executeable</target>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter.coffeePath.1">
+        <source xml:lang="de">Geben Sie hier den Pfad zur &lt;code&gt;coffee&lt;/code&gt; Executeable an (Standard: /usr/bin/coffee).</source>
+        <target xml:lang="de">Geben Sie hier den Pfad zur &lt;code&gt;coffee&lt;/code&gt; Executeable an (Standard: /usr/bin/coffee).</target>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter.compassPath.0">
+        <source xml:lang="de">compass Executeable</source>
+        <target xml:lang="de">compass Executeable</target>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter.compassPath.1">
+        <source xml:lang="de">Geben Sie hier den Pfad zur &lt;code&gt;compass&lt;/code&gt; Executeable an (Standard: /usr/bin/compass).</source>
+        <target xml:lang="de">Geben Sie hier den Pfad zur &lt;code&gt;compass&lt;/code&gt; Executeable an (Standard: /usr/bin/compass).</target>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter.cssEmbedPath.0">
+        <source xml:lang="de">CssEmbed JAR</source>
+        <target xml:lang="de">CssEmbed JAR</target>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter.cssEmbedPath.1">
+        <source xml:lang="de">Geben Sie hier den Pfad zur CssEmbed JAR Datei an.</source>
+        <target xml:lang="de">Geben Sie hier den Pfad zur CssEmbed JAR Datei an.</target>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter.importFilter.0">
+        <source xml:lang="de">Import Filter</source>
+        <target xml:lang="de">Import Filter</target>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter.importFilter.1">
+        <source xml:lang="de">W&#xE4;hlen Sie hier einen Filter der beim Importieren angewendet werden soll (Standard: CSS Rewrite Filter).</source>
+        <target xml:lang="de">W&#xE4;hlen Sie hier einen Filter der beim Importieren angewendet werden soll (Standard: CSS Rewrite Filter).</target>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter.gssPath.0">
+        <source xml:lang="de">GSS JAR</source>
+        <target xml:lang="de">GSS JAR</target>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter.gssPath.1">
+        <source xml:lang="de">Geben Sie hier den Pfad zur GSS JAR Datei an.</source>
+        <target xml:lang="de">Geben Sie hier den Pfad zur GSS JAR Datei an.</target>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter.handlebarsPath.0">
+        <source xml:lang="de">Handlebars Executeable</source>
+        <target xml:lang="de">Handlebars Executeable</target>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter.handlebarsPath.1">
+        <source xml:lang="de">Geben Sie hier den Pfad zur &lt;code&gt;compass&lt;/code&gt; Executeable an (Standard: /usr/bin/handlebars).</source>
+        <target xml:lang="de">Geben Sie hier den Pfad zur &lt;code&gt;compass&lt;/code&gt; Executeable an (Standard: /usr/bin/handlebars).</target>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter.uglifyCssPath.0">
+        <source xml:lang="de">UglifyCSS Executeable</source>
+        <target xml:lang="de">UglifyCSS Executeable</target>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter.uglifyCssPath.1">
+        <source xml:lang="de">Geben Sie hier den Pfad zur &lt;code&gt;uglifycss&lt;/code&gt; Executeable an.</source>
+        <target xml:lang="de">Geben Sie hier den Pfad zur &lt;code&gt;uglifycss&lt;/code&gt; Executeable an.</target>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter.uglifyJsPath.0">
+        <source xml:lang="de">UglifyJS Executeable</source>
+        <target xml:lang="de">UglifyJS Executeable</target>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter.uglifyJsPath.1">
+        <source xml:lang="de">Geben Sie hier den Pfad zur &lt;code&gt;uglifyjs&lt;/code&gt; Executeable an.</source>
+        <target xml:lang="de">Geben Sie hier den Pfad zur &lt;code&gt;uglifyjs&lt;/code&gt; Executeable an.</target>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter.yuiPath.0">
+        <source xml:lang="de">YUI JAR</source>
+        <target xml:lang="de">YUI JAR</target>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter.yuiPath.1">
+        <source xml:lang="de">Geben Sie hier den Pfad zur YUI JAR Datei an.</source>
+        <target xml:lang="de">Geben Sie hier den Pfad zur YUI JAR Datei an.</target>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter.sassPath.0">
+        <source xml:lang="de">SASS Executeable</source>
+        <target xml:lang="de">SASS Executeable</target>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter.sassPath.1">
+        <source xml:lang="de">Geben Sie hier den Pfad zur &lt;code&gt;sass&lt;/code&gt; Executeable an (Standard: /usr/bin/sass).</source>
+        <target xml:lang="de">Geben Sie hier den Pfad zur &lt;code&gt;sass&lt;/code&gt; Executeable an (Standard: /usr/bin/sass).</target>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter.closurePath.0">
+        <source xml:lang="de">Closure JAR</source>
+        <target xml:lang="de">Closure JAR</target>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter.closurePath.1">
+        <source xml:lang="de">Geben Sie hier den Pfad zur Closure JAR Datei an.</source>
+        <target xml:lang="de">Geben Sie hier den Pfad zur Closure JAR Datei an.</target>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter.tstamp.0">
+        <source xml:lang="de">&#xC4;nderungsdatum</source>
+        <target xml:lang="de">&#xC4;nderungsdatum</target>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter.tstamp.1">
+        <source xml:lang="de">Datum und Uhrzeit der letzten &#xC4;nderung</source>
+        <target xml:lang="de">Datum und Uhrzeit der letzten &#xC4;nderung</target>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter.filter_legend">
+        <source xml:lang="de">Filter</source>
+        <target xml:lang="de">Filter</target>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter.coffee_legend">
+        <source xml:lang="de">CoffeeScript</source>
+        <target xml:lang="de">CoffeeScript</target>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter.compass_legend">
+        <source xml:lang="de">Compass</source>
+        <target xml:lang="de">Compass</target>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter.cssEmbed_legend">
+        <source xml:lang="de">CssEmbed</source>
+        <target xml:lang="de">CssEmbed</target>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter.cssImport_legend">
+        <source xml:lang="de">CssImport</source>
+        <target xml:lang="de">CssImport</target>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter.gss_legend">
+        <source xml:lang="de">GSS</source>
+        <target xml:lang="de">GSS</target>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter.less_legend">
+        <source xml:lang="de">Less</source>
+        <target xml:lang="de">Less</target>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter.stylus_legend">
+        <source xml:lang="de">Stylus</source>
+        <target xml:lang="de">Stylus</target>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter.uglifyCss_legend">
+        <source xml:lang="de">UglifyCSS</source>
+        <target xml:lang="de">UglifyCSS</target>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter.handlebars_legend">
+        <source xml:lang="de">Handlebars</source>
+        <target xml:lang="de">Handlebars</target>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter.uglifyJs_legend">
+        <source xml:lang="de">UglifyJS</source>
+        <target xml:lang="de">UglifyJS</target>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter.status_legend">
+        <source xml:lang="de">Status</source>
+        <target xml:lang="de">Status</target>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter.theme_imported">
+        <source xml:lang="de">Das Theme "%s" wurde importiert.</source>
+        <target xml:lang="de">Das Theme "%s" wurde importiert.</target>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter.checking_theme">
+        <source xml:lang="de">Die Theme-Daten werden &#xFC;berpr&#xFC;ft</source>
+        <target xml:lang="de">Die Theme-Daten werden &#xFC;berpr&#xFC;ft</target>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter.tables_fields">
+        <source xml:lang="de">Tabellen und Felder</source>
+        <target xml:lang="de">Tabellen und Felder</target>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter.missing_field">
+        <source xml:lang="de">Das Feld &lt;strong&gt;%s&lt;/strong&gt; fehlt in der Datenbank und wird daher nicht importiert.</source>
+        <target xml:lang="de">Das Feld &lt;strong&gt;%s&lt;/strong&gt; fehlt in der Datenbank und wird daher nicht importiert.</target>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter.tables_ok">
+        <source xml:lang="de">Die Pr&#xFC;fung der Tabellen war erfolgreich.</source>
+        <target xml:lang="de">Die Pr&#xFC;fung der Tabellen war erfolgreich.</target>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter.custom_sections">
+        <source xml:lang="de">Eigene Layoutbereiche</source>
+        <target xml:lang="de">Eigene Layoutbereiche</target>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter.missing_section">
+        <source xml:lang="de">Der Layoutbereich &lt;strong&gt;%s&lt;/strong&gt; ist in den Backend-Einstellungen nicht definiert.</source>
+        <target xml:lang="de">Der Layoutbereich &lt;strong&gt;%s&lt;/strong&gt; ist in den Backend-Einstellungen nicht definiert.</target>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter.sections_ok">
+        <source xml:lang="de">Die Pr&#xFC;fung der Layoutbereiche war erfolgreich.</source>
+        <target xml:lang="de">Die Pr&#xFC;fung der Layoutbereiche war erfolgreich.</target>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter.missing_xml">
+        <source xml:lang="de">Das Theme "%s" ist fehlerhaft und kann nicht importiert werden.</source>
+        <target xml:lang="de">Das Theme "%s" ist fehlerhaft und kann nicht importiert werden.</target>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter.custom_templates">
+        <source xml:lang="de">Eigene Templates</source>
+        <target xml:lang="de">Eigene Templates</target>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter.template_exists">
+        <source xml:lang="de">Das Template &lt;strong&gt;"%s"&lt;/strong&gt; existiert bereits und wird &#xFC;berschrieben.</source>
+        <target xml:lang="de">Das Template &lt;strong&gt;"%s"&lt;/strong&gt; existiert bereits und wird &#xFC;berschrieben.</target>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter.templates_ok">
+        <source xml:lang="de">Keine Konflikte festgestellt.</source>
+        <target xml:lang="de">Keine Konflikte festgestellt.</target>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter.new.0">
+        <source xml:lang="de">Neuer Filter</source>
+        <target xml:lang="de">Neuer Filter</target>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter.new.1">
+        <source xml:lang="de">Einen neuen Filter anlegen</source>
+        <target xml:lang="de">Einen neuen Filter anlegen</target>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter.show.0">
+        <source xml:lang="de">Filterdetails</source>
+        <target xml:lang="de">Filterdetails</target>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter.show.1">
+        <source xml:lang="de">Details des Filters ID %s anzeigen</source>
+        <target xml:lang="de">Details des Filters ID %s anzeigen</target>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter.edit.0">
+        <source xml:lang="de">Filter bearbeiten</source>
+        <target xml:lang="de">Filter bearbeiten</target>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter.edit.1">
+        <source xml:lang="de">Filter ID %s bearbeiten</source>
+        <target xml:lang="de">Filter ID %s bearbeiten</target>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter.delete.0">
+        <source xml:lang="de">Filter l&#xF6;schen</source>
+        <target xml:lang="de">Filter l&#xF6;schen</target>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter.delete.1">
+        <source xml:lang="de">Filter ID %s l&#xF6;schen</source>
+        <target xml:lang="de">Filter ID %s l&#xF6;schen</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
