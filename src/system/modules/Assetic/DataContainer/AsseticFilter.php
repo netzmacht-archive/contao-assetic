@@ -2,8 +2,7 @@
 
 namespace InfinitySoft\Assetic\DataContainer;
 
-use
-\Assetic\Model\FilterChainModel;
+use \Assetic\Model\FilterChainModel;
 
 class AsseticFilter
 {
