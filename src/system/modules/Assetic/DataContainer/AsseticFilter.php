@@ -90,4 +90,15 @@ class AsseticFilter
 
         return $options;
     }
+
+    public function filterLabel($row, $label, $dc, $fields)
+    {
+        if (!empty($fields[1])) {
+            $label .= sprintf(
+                ' [%s]',
+                $fields[1]
+            );
+        }
+        return $label;
+    }
 }
