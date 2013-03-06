@@ -82,6 +82,14 @@
         <source xml:lang="de">Geben Sie hier den Pfad zur &lt;code&gt;compass&lt;/code&gt; Executeable an (Standard: /usr/bin/compass).</source>
         <target xml:lang="de">Geben Sie hier den Pfad zur &lt;code&gt;compass&lt;/code&gt; Executeable an (Standard: /usr/bin/compass).</target>
       </trans-unit>
+      <trans-unit id="tl_assetic_filter.cssCrushPlugins.0">
+        <source xml:lang="de">Plugins</source>
+        <target xml:lang="de">Plugins</target>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter.cssCrushPlugins.1">
+        <source xml:lang="de">Wählen Sie hier die CssCrush Plugins aus.</source>
+        <target xml:lang="de">Wählen Sie hier die CssCrush Plugins aus.</target>
+      </trans-unit>
       <trans-unit id="tl_assetic_filter.cssEmbedPath.0">
         <source xml:lang="de">CssEmbed JAR</source>
         <target xml:lang="de">CssEmbed JAR</target>

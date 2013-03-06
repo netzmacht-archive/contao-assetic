@@ -38,6 +38,7 @@ require_once(TL_ROOT . '/system/modules/Assetic/vendor/assetic/src/functions.php
  */
 $GLOBALS['ASSETIC']['compiler']['coffee']      = 'Assetic\Filter\CoffeeScriptFilter';
 $GLOBALS['ASSETIC']['compiler']['compass']     = 'Assetic\Filter\CompassFilter';
+$GLOBALS['ASSETIC']['compiler']['cssCrush']    = 'Assetic\Filter\CssCrushFilter';
 $GLOBALS['ASSETIC']['compiler']['cssEmbed']    = 'Assetic\Filter\CssEmbedFilter';
 $GLOBALS['ASSETIC']['compiler']['cssImport']   = 'Assetic\Filter\CssImportFilter';
 $GLOBALS['ASSETIC']['compiler']['cssRewrite']  = 'Assetic\Filter\CssRewriteFilter';
@@ -70,6 +71,7 @@ $GLOBALS['ASSETIC']['minimizer']['yuiJs']      = 'Assetic\Filter\Yui\JsCompresso
  * Assetic css compatible filters
  */
 $GLOBALS['ASSETIC']['css'][] = 'compass';
+$GLOBALS['ASSETIC']['css'][] = 'cssCrush';
 $GLOBALS['ASSETIC']['css'][] = 'cssEmbed';
 $GLOBALS['ASSETIC']['css'][] = 'cssImport';
 $GLOBALS['ASSETIC']['css'][] = 'cssMin';

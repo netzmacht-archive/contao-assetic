@@ -101,4 +101,21 @@ class AsseticFilter
         }
         return $label;
     }
+
+	public function getCssCrushPlugins()
+	{
+		$options = array();
+
+		$path = __DIR__ . '/../../css-crush/vendor/css-crush/plugins';
+		if (is_dir($path)) {
+			$files = scandir($path);
+			foreach ($files as $file) {
+				if (preg_match('#^(.*)\.php$#', $file, $match)) {
+					$options[$match[1]] = $match[1];
+				}
+			}
+		}
+
+		return $options;
+	}
 }

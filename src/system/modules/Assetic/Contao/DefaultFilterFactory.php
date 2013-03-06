@@ -15,6 +15,7 @@ namespace InfinitySoft\Assetic\Contao;
 
 use Assetic\Filter\CoffeeScriptFilter;
 use Assetic\Filter\CompassFilter;
+use Assetic\Filter\CssCrushFilter;
 use Assetic\Filter\CssEmbedFilter;
 use Assetic\Filter\CssImportFilter;
 use Assetic\Filter\CssMinFilter;
@@ -70,6 +71,14 @@ class DefaultFilterFactory
                     $filter = new CompassFilter();
                 }
                 break;
+
+	        case 'cssCrush':
+		        $plugins = deserialize($filterConfig['cssCrushPlugins'], true);
+
+		        $filter = new CssCrushFilter();
+		        $filter->setDebug(true);
+		        $filter->setPlugins($plugins);
+		        break;
 
             case 'cssEmbed':
                 if ($filterConfig['cssEmbedPath'] && $filterConfig['javaPath']) {

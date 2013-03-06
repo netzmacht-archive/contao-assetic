@@ -107,6 +107,11 @@ $GLOBALS['TL_DCA']['tl_assetic_filter'] = array
             'compass' => array('compassPath', 'rubyPath'),
             'status'  => array('disabled', 'notInDebug'),
         ),
+        'cssCrush'             => array(
+            'filter'   => array('type', 'note'),
+            'cssEmbed' => array('cssCrushPlugins'),
+            'status'   => array('disabled', 'notInDebug'),
+        ),
         'cssEmbed'             => array(
             'filter'   => array('type', 'note'),
             'cssEmbed' => array('cssEmbedPath', 'javaPath'),
@@ -233,7 +238,7 @@ $GLOBALS['TL_DCA']['tl_assetic_filter'] = array
             'sorting'          => true,
             'flag'             => 1,
             'filter'           => true,
-            'options_callback' => array('\Assetic\DataContainer\AsseticFilter', 'getFilterTypeOptions'),
+            'options_callback' => array('Assetic\DataContainer\AsseticFilter', 'getFilterTypeOptions'),
             'reference'        => $GLOBALS['TL_LANG']['assetic'],
             'eval'             => array('mandatory'          => true,
                                         'tl_class'           => 'w50',
@@ -347,7 +352,20 @@ $GLOBALS['TL_DCA']['tl_assetic_filter'] = array
             'sql'       => "varchar(255) NOT NULL default ''",
         ),
 
-        /**
+	    /**
+	     * CssCrush settings
+	     */
+		'cssCrushPlugins' => array
+		(
+            'label'     => &$GLOBALS['TL_LANG']['tl_assetic_filter']['cssCrushPlugins'],
+            'inputType' => 'checkboxWizard',
+            'exclude'   => true,
+			'options_callback' => array('Assetic\DataContainer\AsseticFilter', 'getCssCrushPlugins'),
+            'eval'      => array('multiple' => true),
+            'sql'       => "blob NULL",
+		),
+
+	    /**
          * CssEmbed settings
          */
         'cssEmbedPath'             => array
