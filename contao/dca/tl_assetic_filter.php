@@ -3,11 +3,11 @@
 /**
  * Assetic for Contao Open Source CMS
  *
- * Copyright (C) 2012 InfinitySoft
+ * Copyright (C) 2013 bit3 UG
  *
  * @package Assetic
- * @author  Tristan Lins <tristan.lins@infinitysoft.de>
- * @link    http://www.infinitysoft.de
+ * @author  Tristan Lins <tristan.lins@bit3.de>
+ * @link    http://bit3.de
  * @license http://www.gnu.org/licenses/lgpl-3.0.html LGPL
  */
 

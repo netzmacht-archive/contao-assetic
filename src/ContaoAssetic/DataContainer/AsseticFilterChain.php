@@ -1,6 +1,6 @@
 <?php
 
-namespace InfinitySoft\Assetic\DataContainer;
+namespace ContaoAssetic\DataContainer;
 
 use Assetic\Model\FilterModel;
 use Assetic\Contao\AsseticFactory;
