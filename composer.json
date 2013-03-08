@@ -39,7 +39,7 @@
 	"extra":{
 		"contao": {
 			"symlinks":{
-				"module":"system/modules/assetic"
+				"contao":"system/modules/assetic"
 			}
 		}
 	}
