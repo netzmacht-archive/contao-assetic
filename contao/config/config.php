@@ -23,15 +23,10 @@ $GLOBALS['TL_MODELS']['tl_assetic_filter_chain'] = 'Assetic\Model\FilterChainMod
  */
 $GLOBALS['BE_MOD']['system']['assetic_config'] = array(
     'tables'     => array('', 'tl_assetic_filter', 'tl_assetic_filter_chain'),
-    'callback'   => 'Assetic\Contao\AsseticConfigModule',
-    'icon'       => 'system/modules/Assetic/assets/images/assetic.png',
-    'stylesheet' => 'system/modules/Assetic/assets/css/backend.css',
+    'callback'   => 'ContaoAssetic\AsseticConfigModule',
+    'icon'       => 'system/modules/assetic/assets/images/assetic.png',
+    'stylesheet' => 'system/modules/assetic/assets/css/backend.css',
 );
-
-/**
- * Include assetic functions
- */
-require_once(TL_ROOT . '/system/modules/Assetic/vendor/assetic/src/functions.php');
 
 /**
  * Assetic compiler filter

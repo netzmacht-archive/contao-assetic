@@ -25,7 +25,8 @@
 		"php":">=5.3",
 		"contao/core":"3.*",
 		"kriswallsmith/assetic":"1.*",
-		"bit3/contao-twig":"dev-master@dev"
+		"bit3/contao-twig":"dev-master@dev",
+		"bit3/contao-meta-palettes":"dev-master"
 	},
 	"require-dev":{
 		"squizlabs/php_codesniffer":"1.*",

@@ -11,7 +11,7 @@
  * @license http://www.gnu.org/licenses/lgpl-3.0.html LGPL
  */
 
-namespace ContaoAssetic\Contao;
+namespace ContaoAssetic;
 
 use Assetic\Model\FilterModel;
 use Assetic\Model\FilterChainModel;
