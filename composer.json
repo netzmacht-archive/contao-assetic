@@ -1,8 +1,8 @@
 {
 	"name":"bit3/contao-assetic",
 	"description":"Assetic integration for Contao OpenSource CMS",
-	"version":"1.0.0",
 	"keywords":["contao", "theme", "css", "js", "stylesheet", "javascript", "assets"],
+	"version":"1.0.0",
 	"type":"contao-module",
 	"homepage":"http://bit3.de",
 	"license":"LGPL-3.0+",
