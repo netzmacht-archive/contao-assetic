@@ -13,8 +13,8 @@
 
 namespace ContaoAssetic;
 
-use Assetic\Model\FilterModel;
-use Assetic\Model\FilterChainModel;
+use ContaoAssetic\Model\FilterModel;
+use ContaoAssetic\Model\FilterChainModel;
 use Assetic\Filter\FilterCollection;
 
 class AsseticFactory

@@ -15,8 +15,8 @@
 /**
  * Models
  */
-$GLOBALS['TL_MODELS']['tl_assetic_filter']       = 'Assetic\Model\FilterModel';
-$GLOBALS['TL_MODELS']['tl_assetic_filter_chain'] = 'Assetic\Model\FilterChainModel';
+$GLOBALS['TL_MODELS']['tl_assetic_filter']       = 'ContaoAssetic\Model\FilterModel';
+$GLOBALS['TL_MODELS']['tl_assetic_filter_chain'] = 'ContaoAssetic\Model\FilterChainModel';
 
 /**
  * Back end modules

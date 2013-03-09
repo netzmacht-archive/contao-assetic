@@ -2,15 +2,14 @@
 
 namespace ContaoAssetic\DataContainer;
 
-use Assetic\Model\FilterModel;
-use Assetic\Contao\AsseticFactory;
+use ContaoAssetic\Model\FilterModel;
 
 class AsseticFilterChain
 {
     /**
      * Singleton instance.
      *
-     * @var \Assetic\DataContainer\AsseticFilterChain
+     * @var ContaoAssetic\DataContainer\AsseticFilterChain
      */
     protected static $objInstance = null;
 
@@ -18,7 +17,7 @@ class AsseticFilterChain
      * Get singleton instance.
      *
      * @static
-     * @return \Assetic\DataContainer\AsseticFilterChain
+     * @return ContaoAssetic\DataContainer\AsseticFilterChain
      */
     public static function getInstance()
     {

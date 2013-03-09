@@ -2,7 +2,7 @@
 
 namespace ContaoAssetic\DataContainer;
 
-use \Assetic\Model\FilterChainModel;
+use ContaoAssetic\Model\FilterChainModel;
 
 class AsseticFilter
 {
