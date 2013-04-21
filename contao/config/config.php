@@ -36,6 +36,7 @@ $GLOBALS['ASSETIC']['compiler']['compass']     = 'Assetic\Filter\CompassFilter';
 $GLOBALS['ASSETIC']['compiler']['cssCrush']    = 'Assetic\Filter\CssCrushFilter';
 $GLOBALS['ASSETIC']['compiler']['cssEmbed']    = 'Assetic\Filter\CssEmbedFilter';
 $GLOBALS['ASSETIC']['compiler']['cssImport']   = 'Assetic\Filter\CssImportFilter';
+$GLOBALS['ASSETIC']['compiler']['jsImport']    = 'ContaoAssetic\Filter\JsImportFilter';
 $GLOBALS['ASSETIC']['compiler']['cssRewrite']  = 'Assetic\Filter\CssRewriteFilter';
 // $GLOBALS['ASSETIC']['compiler']['gss']         = 'Assetic\Filter\GssFilter';
 // $GLOBALS['ASSETIC']['compiler']['handlebars']  = 'Assetic\Filter\HandlebarsFilter';
@@ -85,6 +86,7 @@ $GLOBALS['ASSETIC']['css'][] = 'yuiCss';
 /**
  * Assetic js compatible filters
  */
+$GLOBALS['ASSETIC']['js'][] = 'jsImport';
 $GLOBALS['ASSETIC']['js'][] = 'coffee';
 // $GLOBALS['ASSETIC']['js'][] = 'handlebars';
 // $GLOBALS['ASSETIC']['js'][] = 'jsMin';

@@ -140,6 +140,11 @@ $GLOBALS['TL_DCA']['tl_assetic_filter'] = array
             'handlebars' => array('handlebarsPath', 'nodePath'),
             'status'     => array('disabled', 'notInDebug'),
         ),
+        'jsImport'             => array(
+            'filter'    => array('type', 'note'),
+            'jsImport'  => array('importFilterJs'),
+            'status'    => array('disabled', 'notInDebug'),
+        ),
         'jsMin'                => array(
             'filter' => array('type', 'note'),
             'status' => array('disabled', 'notInDebug'),
@@ -388,6 +393,17 @@ $GLOBALS['TL_DCA']['tl_assetic_filter'] = array
             'inputType'        => 'select',
             'exclude'          => true,
             'options_callback' => array('ContaoAssetic\DataContainer\AsseticFilter', 'getImportFilterOptions'),
+            'reference'        => &$GLOBALS['TL_LANG']['assetic'],
+            'eval'             => array('tl_class'           => 'w50',
+                                        'includeBlankOption' => true),
+            'sql'              => "blob NULL",
+        ),
+        'importFilterJs'           => array
+        (
+            'label'            => &$GLOBALS['TL_LANG']['tl_assetic_filter']['importFilterJs'],
+            'inputType'        => 'select',
+            'exclude'          => true,
+            'options_callback' => array('ContaoAssetic\DataContainer\AsseticFilter', 'getImportFilterJsOptions'),
             'reference'        => &$GLOBALS['TL_LANG']['assetic'],
             'eval'             => array('tl_class'           => 'w50',
                                         'includeBlankOption' => true),

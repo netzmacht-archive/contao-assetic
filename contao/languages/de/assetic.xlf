@@ -90,6 +90,10 @@
         <source xml:lang="de">Handlebars (JS)</source>
         <target xml:lang="de">Handlebars (JS)</target>
       </trans-unit>
+      <trans-unit id="assetic.jsImport">
+        <source xml:lang="de">JS Import (JS)</source>
+        <target xml:lang="de">JS Import (JS)</target>
+      </trans-unit>
       <trans-unit id="assetic.jsMin">
         <source xml:lang="de">JS Min (JS)</source>
         <target xml:lang="de">JS Min (JS)</target>

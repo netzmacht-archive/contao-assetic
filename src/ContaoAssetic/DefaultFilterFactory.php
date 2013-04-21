@@ -39,6 +39,8 @@ use Assetic\Filter\Sass\SassFilter;
 use Assetic\Filter\Sass\ScssFilter;
 use Assetic\Filter\Yui\CssCompressorFilter;
 use Assetic\Filter\Yui\JsCompressorFilter;
+use ContaoAssetic\Filter\JsImportFilter;
+use ContaoAssetic\Filter\NoOpFilter;
 
 class DefaultFilterFactory
     implements FilterFactory
@@ -131,6 +133,24 @@ class DefaultFilterFactory
                 else {
                     $filter = new HandlebarsFilter();
                 }
+                break;
+
+            case 'jsImport':
+                $importFilterJs = null;
+
+                if ($filterConfig['importFilterJs']) {
+                    if (preg_match('#filter:(\d+)#', $filterConfig['importFilterJs'], $match)) {
+                        $importFilterJs = AsseticFactory::getInstance()->createFilterById($match[1]);
+                    }
+                    else if (preg_match('#chain:(\d+)#', $filterConfig['importFilterJs'], $match)) {
+                        $importFilterJs = AsseticFactory::getInstance()->createFilterChainById($match[1]);
+                    }
+                }
+				if (empty($importFilterJs)) {
+					$importFilterJs = new NoOpFilter();
+				}
+
+                $filter = new JsImportFilter($importFilterJs);
                 break;
 
             case 'jsMin':

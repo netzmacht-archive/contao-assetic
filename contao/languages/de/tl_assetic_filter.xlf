@@ -106,6 +106,14 @@
         <source xml:lang="de">W&#xE4;hlen Sie hier einen Filter der beim Importieren angewendet werden soll (Standard: CSS Rewrite Filter).</source>
         <target xml:lang="de">W&#xE4;hlen Sie hier einen Filter der beim Importieren angewendet werden soll (Standard: CSS Rewrite Filter).</target>
       </trans-unit>
+      <trans-unit id="tl_assetic_filter.importFilterJs.0">
+        <source xml:lang="de">Import Filter</source>
+        <target xml:lang="de">Import Filter</target>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter.importFilterJs.1">
+        <source xml:lang="de">W&#xE4;hlen Sie hier einen Filter der beim Importieren angewendet werden soll.</source>
+        <target xml:lang="de">W&#xE4;hlen Sie hier einen Filter der beim Importieren angewendet werden soll.</target>
+      </trans-unit>
       <trans-unit id="tl_assetic_filter.gssPath.0">
         <source xml:lang="de">GSS JAR</source>
         <target xml:lang="de">GSS JAR</target>
@@ -189,6 +197,10 @@
       <trans-unit id="tl_assetic_filter.cssImport_legend">
         <source xml:lang="de">CssImport</source>
         <target xml:lang="de">CssImport</target>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter.jsImport_legend">
+        <source xml:lang="de">JsImport</source>
+        <target xml:lang="de">JsImport</target>
       </trans-unit>
       <trans-unit id="tl_assetic_filter.gss_legend">
         <source xml:lang="de">GSS</source>
