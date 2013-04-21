@@ -150,7 +150,7 @@ class AsseticFilter
 	{
 		$options = array();
 
-		$path = __DIR__ . '/../../css-crush/vendor/css-crush/plugins';
+		$path = TL_ROOT . '/composer/vendor/css-crush/css-crush/plugins';
 		if (is_dir($path)) {
 			$files = scandir($path);
 			foreach ($files as $file) {

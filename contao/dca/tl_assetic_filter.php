@@ -109,7 +109,7 @@ $GLOBALS['TL_DCA']['tl_assetic_filter'] = array
         ),
         'cssCrush'             => array(
             'filter'   => array('type', 'note'),
-            'cssEmbed' => array('cssCrushPlugins'),
+            'cssCrush' => array('cssCrushPlugins'),
             'status'   => array('disabled', 'notInDebug'),
         ),
         'cssEmbed'             => array(
