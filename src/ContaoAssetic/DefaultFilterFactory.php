@@ -191,6 +191,9 @@ class DefaultFilterFactory
 
             case 'scssphp':
                 $filter = new ScssphpFilter();
+				if ($filterConfig['scssphpCompass']) {
+					$filter->enableCompass(true);
+				}
                 break;
 
             case 'stylus':

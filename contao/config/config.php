@@ -31,22 +31,22 @@ $GLOBALS['BE_MOD']['system']['assetic_config'] = array(
 /**
  * Assetic compiler filter
  */
-$GLOBALS['ASSETIC']['compiler']['coffee']      = 'Assetic\Filter\CoffeeScriptFilter';
-$GLOBALS['ASSETIC']['compiler']['compass']     = 'Assetic\Filter\CompassFilter';
-$GLOBALS['ASSETIC']['compiler']['cssCrush']    = 'Assetic\Filter\CssCrushFilter';
-$GLOBALS['ASSETIC']['compiler']['cssEmbed']    = 'Assetic\Filter\CssEmbedFilter';
-$GLOBALS['ASSETIC']['compiler']['cssImport']   = 'Assetic\Filter\CssImportFilter';
-$GLOBALS['ASSETIC']['compiler']['jsImport']    = 'ContaoAssetic\Filter\JsImportFilter';
-$GLOBALS['ASSETIC']['compiler']['cssRewrite']  = 'Assetic\Filter\CssRewriteFilter';
-// $GLOBALS['ASSETIC']['compiler']['gss']         = 'Assetic\Filter\GssFilter';
-// $GLOBALS['ASSETIC']['compiler']['handlebars']  = 'Assetic\Filter\HandlebarsFilter';
-$GLOBALS['ASSETIC']['compiler']['less']        = 'Assetic\Filter\LessFilter';
-$GLOBALS['ASSETIC']['compiler']['lessphp']     = 'Assetic\Filter\LessphpFilter';
-// $GLOBALS['ASSETIC']['compiler']['phpCssEmbed'] = 'Assetic\Filter\PhpCssEmbedFilter';
-// $GLOBALS['ASSETIC']['compiler']['scssphp']     = 'Assetic\Filter\ScssphpFilter';
-$GLOBALS['ASSETIC']['compiler']['stylus']      = 'Assetic\Filter\StylusFilter';
-$GLOBALS['ASSETIC']['compiler']['sass']        = 'Assetic\Filter\Sass\SassFilter';
-$GLOBALS['ASSETIC']['compiler']['scss']        = 'Assetic\Filter\Sass\ScssFilter';
+$GLOBALS['ASSETIC']['compiler']['coffee']          = 'Assetic\Filter\CoffeeScriptFilter';
+$GLOBALS['ASSETIC']['compiler']['compass']         = 'Assetic\Filter\CompassFilter';
+$GLOBALS['ASSETIC']['compiler']['cssCrush']        = 'Assetic\Filter\CssCrushFilter';
+$GLOBALS['ASSETIC']['compiler']['cssEmbed']        = 'Assetic\Filter\CssEmbedFilter';
+$GLOBALS['ASSETIC']['compiler']['cssImport']       = 'Assetic\Filter\CssImportFilter';
+$GLOBALS['ASSETIC']['compiler']['jsImport']        = 'ContaoAssetic\Filter\JsImportFilter';
+$GLOBALS['ASSETIC']['compiler']['cssRewrite']      = 'Assetic\Filter\CssRewriteFilter';
+// $GLOBALS['ASSETIC']['compiler']['gss']             = 'Assetic\Filter\GssFilter';
+// $GLOBALS['ASSETIC']['compiler']['handlebars']      = 'Assetic\Filter\HandlebarsFilter';
+$GLOBALS['ASSETIC']['compiler']['less']            = 'Assetic\Filter\LessFilter';
+$GLOBALS['ASSETIC']['compiler']['lessphp']         = 'Assetic\Filter\LessphpFilter';
+// $GLOBALS['ASSETIC']['compiler']['phpCssEmbed']     = 'Assetic\Filter\PhpCssEmbedFilter';
+$GLOBALS['ASSETIC']['compiler']['scssphp']         = 'Assetic\Filter\ScssphpFilter';
+$GLOBALS['ASSETIC']['compiler']['stylus']          = 'Assetic\Filter\StylusFilter';
+$GLOBALS['ASSETIC']['compiler']['sass']            = 'Assetic\Filter\Sass\SassFilter';
+$GLOBALS['ASSETIC']['compiler']['scss']            = 'Assetic\Filter\Sass\ScssFilter';
 
 /**
  * Assetic minimizer filter
