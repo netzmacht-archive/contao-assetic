@@ -23,7 +23,7 @@
 	"require":{
 		"php":">=5.3",
 		"contao/core":"3.*",
-		"kriswallsmith/assetic":"1.*",
+		"kriswallsmith/assetic":"~1.1",
 		"bit3/contao-twig":"~1.3",
 		"bit3/contao-meta-palettes":"~1"
 	},
