@@ -20,6 +20,7 @@ use Assetic\Filter\CssEmbedFilter;
 use Assetic\Filter\CssImportFilter;
 use Assetic\Filter\CssMinFilter;
 use Assetic\Filter\CssRewriteFilter;
+use Assetic\Filter\DartFilter;
 use Assetic\Filter\GssFilter;
 use Assetic\Filter\HandlebarsFilter;
 use Assetic\Filter\JSMinFilter;
@@ -112,6 +113,15 @@ class DefaultFilterFactory
 
             case 'cssRewrite':
                 $filter = new CssRewriteFilter();
+                break;
+
+            case 'dart':
+                if ($filterConfig['dartPath']) {
+                    $filter = new DartFilter($filterConfig['dartPath']);
+                }
+                else {
+                    $filter = new DartFilter();
+                }
                 break;
 
             case 'gss':

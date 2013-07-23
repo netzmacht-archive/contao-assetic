@@ -38,6 +38,7 @@ $GLOBALS['ASSETIC']['compiler']['cssEmbed']        = 'Assetic\Filter\CssEmbedFil
 $GLOBALS['ASSETIC']['compiler']['cssImport']       = 'Assetic\Filter\CssImportFilter';
 $GLOBALS['ASSETIC']['compiler']['jsImport']        = 'ContaoAssetic\Filter\JsImportFilter';
 $GLOBALS['ASSETIC']['compiler']['cssRewrite']      = 'Assetic\Filter\CssRewriteFilter';
+$GLOBALS['ASSETIC']['compiler']['dart']            = 'Assetic\Filter\DartFilter';
 $GLOBALS['ASSETIC']['compiler']['gss']             = 'Assetic\Filter\GssFilter';
 // $GLOBALS['ASSETIC']['compiler']['handlebars']      = 'Assetic\Filter\HandlebarsFilter';
 $GLOBALS['ASSETIC']['compiler']['less']            = 'Assetic\Filter\LessFilter';
@@ -88,6 +89,7 @@ $GLOBALS['ASSETIC']['css'][] = 'yuiCss';
  */
 $GLOBALS['ASSETIC']['js'][] = 'jsImport';
 $GLOBALS['ASSETIC']['js'][] = 'coffee';
+$GLOBALS['ASSETIC']['js'][] = 'dart';
 // $GLOBALS['ASSETIC']['js'][] = 'handlebars';
 $GLOBALS['ASSETIC']['js'][] = 'jsMin';
 $GLOBALS['ASSETIC']['js'][] = 'jsMinPlus';

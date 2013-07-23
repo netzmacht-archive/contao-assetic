@@ -122,6 +122,14 @@
         <source xml:lang="de">Geben Sie hier den Pfad zur GSS JAR Datei an.</source>
         <target xml:lang="de">Geben Sie hier den Pfad zur GSS JAR Datei an.</target>
       </trans-unit>
+      <trans-unit id="tl_assetic_filter.dartPath.0">
+        <source xml:lang="de">Dart Executeable</source>
+        <target xml:lang="de">Dart Executeable</target>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter.dartPath.1">
+        <source xml:lang="de">Geben Sie hier den Pfad zur Dart Executeable an.</source>
+        <target xml:lang="de">Geben Sie hier den Pfad zur Dart Executeable an.</target>
+      </trans-unit>
       <trans-unit id="tl_assetic_filter.handlebarsPath.0">
         <source xml:lang="de">Handlebars Executeable</source>
         <target xml:lang="de">Handlebars Executeable</target>

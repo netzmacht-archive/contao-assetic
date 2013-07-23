@@ -130,6 +130,11 @@ $GLOBALS['TL_DCA']['tl_assetic_filter'] = array
             'filter' => array('type', 'note'),
             'status' => array('disabled', 'notInDebug'),
         ),
+        'dart'                 => array(
+            'filter' => array('type', 'note'),
+            'dart'   => array('dartPath'),
+            'status' => array('disabled', 'notInDebug'),
+        ),
         'gss'                  => array(
             'filter' => array('type', 'note'),
             'gss'    => array('gssPath', 'javaPath'),
@@ -421,6 +426,19 @@ $GLOBALS['TL_DCA']['tl_assetic_filter'] = array
             'exclude'   => true,
             'eval'      => array('mandatory' => true,
                                  'maxlength' => 255,
+                                 'tl_class'  => 'w50'),
+            'sql'       => "varchar(255) NOT NULL default ''",
+        ),
+
+        /**
+         * Dart settings
+         */
+        'dartPath'                 => array
+        (
+            'label'     => &$GLOBALS['TL_LANG']['tl_assetic_filter']['dartPath'],
+            'inputType' => 'text',
+            'exclude'   => true,
+            'eval'      => array('maxlength' => 255,
                                  'tl_class'  => 'w50'),
             'sql'       => "varchar(255) NOT NULL default ''",
         ),
