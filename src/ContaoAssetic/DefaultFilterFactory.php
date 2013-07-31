@@ -42,6 +42,7 @@ use Assetic\Filter\Yui\CssCompressorFilter;
 use Assetic\Filter\Yui\JsCompressorFilter;
 use ContaoAssetic\Filter\JsImportFilter;
 use ContaoAssetic\Filter\NoOpFilter;
+use ContaoAssetic\Filter\MrclayCssMinFilter;
 
 class DefaultFilterFactory
     implements FilterFactory
@@ -108,7 +109,17 @@ class DefaultFilterFactory
                 break;
 
             case 'cssMin':
-                $filter = new CssMinFilter();
+                if(class_exists("cssmin"))
+                {
+                    if(file_exists(TL_ROOT . '/composer/vendor/mrclay/minify/min/lib/CSSmin.php'))
+                    {
+                        $filter = new MrclayCssMinFilter();
+                    }
+                    else if(class_exists("CssMin"))
+                    {
+                        $filter = new CssMinFilter();
+                    }
+                }               
                 break;
 
             case 'cssRewrite':
