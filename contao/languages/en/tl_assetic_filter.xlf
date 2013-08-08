@@ -1,0 +1,247 @@
+<?xml version="1.0"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file original="system/modules/assetic/languages/de/tl_assetic_filter.php" source-language="en" datatype="php" date="2012-10-22T13:01:00+00:00">
+    <body>
+      <trans-unit id="tl_assetic_filter.type.0">
+        <source>Type</source>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter.type.1">
+        <source>Here you can select the type of filter.</source>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter.note.0">
+        <source>Note</source>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter.note.1">
+        <source>Enter a short note, so that you can easily identify the filter afterwards.</source>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter.disabled.0">
+        <source>Disabled</source>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter.disabled.1">
+        <source>Disable the filter so that it is ignored during processing without the need to remove it from the chain.</source>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter.notInDebug.0">
+        <source>Not in debug mode</source>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter.notInDebug.1">
+        <source>The filter is turned off in debug mode.</source>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter.nodePath.0">
+        <source>Node executeable</source>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter.nodePath.1">
+        <source>Enter the path to the &lt;code&gt;node&lt;/code&gt; executeable (default: /usr/bin/node).</source>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter.nodePaths.0">
+        <source>Node include paths</source>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter.nodePaths.1">
+        <source>Enter one or more node to include paths.</source>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter.rubyPath.0">
+        <source>Ruby executeable</source>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter.rubyPath.1">
+        <source>Enter the path to the &lt;code&gt;ruby&lt;/ code&gt; executeable (default: null).</source>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter.javaPath.0">
+        <source>Java executeable</source>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter.javaPath.1">
+        <source>Enter the path to the &lt;code&gt;java&lt;/ code&gt; executeable (default: /usr/bin/java).</source>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter.coffeePath.0">
+        <source>CoffeScript executeable</source>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter.coffeePath.1">
+        <source>Enter the path to the &lt;code&gt;coffee&lt;/code&gt; executeable (default: /usr/bin/coffee).</source>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter.compassPath.0">
+        <source>Compass executeable</source>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter.compassPath.1">
+        <source>Enter the path to the &lt;code&gt;compass&lt;/code&gt; executeable (default: /usr/bin/compass).</source>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter.cssCrushPlugins.0">
+        <source>Plugins</source>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter.cssCrushPlugins.1">
+        <source>Here you can select the CssCrush plugins.</source>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter.cssEmbedPath.0">
+        <source>CssEmbed JAR</source>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter.cssEmbedPath.1">
+        <source>Enter the path to the JAR file CssEmbed.</source>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter.importFilter.0">
+        <source>Import Filter</source>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter.importFilter.1">
+        <source>Here you can select a filter to be applied when importing (default: CSS rewrite filter).</source>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter.importFilterJs.0">
+        <source>Import Filter</source>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter.importFilterJs.1">
+        <source>Here you can select a filter to be applied on import.</source>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter.gssPath.0">
+        <source>GSS JAR</source>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter.gssPath.1">
+        <source>Enter the path to the GSS JAR file.</source>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter.handlebarsPath.0">
+        <source>Handlebars executeable</source>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter.handlebarsPath.1">
+        <source>Enter the path to the &lt;code&gt;compass&lt;/code&gt; executeable (default: /usr/bin/handlebars).</source>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter.uglifyCssPath.0">
+        <source>UglifyCSS executeable</source>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter.uglifyCssPath.1">
+        <source>Enter the path to the &lt;code&gt;uglifycss&lt;/code&gt; executeable.</source>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter.uglifyJsPath.0">
+        <source>UglifyJS executeable</source>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter.uglifyJsPath.1">
+        <source>Enter the path to the &lt;code&gt;uglifyjs&lt;/code&gt; executeable.</source>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter.yuiPath.0">
+        <source>YUI JAR</source>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter.yuiPath.1">
+        <source>Enter the path to the YUI JAR.</source>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter.sassPath.0">
+        <source>SASS executeable</source>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter.sassPath.1">
+        <source>Enter the path to the &lt;code&gt;sass&lt;/code&gt; executeable (Default: /usr/bin/sass).</source>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter.scssphpCompass.0">
+        <source>Activate SCSS PHP Compass</source>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter.scssphpCompass.1">
+        <source>If &lt;code&gt;leafo/scssphp-Compass&lt;/code&gt; is installed, you can enable the extension here.</source>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter.closurePath.0">
+        <source>Closure JAR</source>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter.closurePath.1">
+        <source>Enter the path to the Closure JAR.</source>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter.tstamp.0">
+        <source>Date modified</source>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter.tstamp.1">
+        <source>Date and time of last modification</source>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter.filter_legend">
+        <source>Filter</source>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter.coffee_legend">
+        <source>CoffeeScript</source>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter.compass_legend">
+        <source>Compass</source>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter.cssEmbed_legend">
+        <source>CssEmbed</source>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter.cssImport_legend">
+        <source>CssImport</source>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter.jsImport_legend">
+        <source>JsImport</source>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter.gss_legend">
+        <source>GSS</source>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter.less_legend">
+        <source>Less</source>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter.scssphp_legend">
+        <source>SCSS PHP</source>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter.stylus_legend">
+        <source>Stylus</source>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter.uglifyCss_legend">
+        <source>UglifyCSS</source>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter.handlebars_legend">
+        <source>Handlebars</source>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter.uglifyJs_legend">
+        <source>UglifyJS</source>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter.status_legend">
+        <source>Status</source>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter.theme_imported">
+        <source>The theme &quot;%s&quot; has been imported.</source>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter.checking_theme">
+        <source>The theme data will be checked</source>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter.tables_fields">
+        <source>Tables and Fields</source>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter.missing_field">
+        <source>The &lt;strong&gt;%s&lt;/strong&gt; is missing in the database and will not be imported.</source>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter.tables_ok">
+        <source>The table examination was successful.</source>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter.custom_sections">
+        <source>Custom layout sections</source>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter.missing_section">
+        <source>The layout area &lt;strong&gt;%s&lt;/strong&gt; is not defined in the backend settings.</source>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter.sections_ok">
+        <source>The examination of the layout areas was successful.</source>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter.missing_xml">
+        <source>The theme &quot;%s&quot; is corrupt and can not be imported.</source>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter.custom_templates">
+        <source>Own templates</source>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter.template_exists">
+        <source>The template &lt;strong&gt;&quot;%s&quot;&lt;/strong&gt; already exists and will be overwritten.</source>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter.templates_ok">
+        <source>No conflicts detected.</source>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter.new.0">
+        <source>New filter</source>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter.new.1">
+        <source>Creating a new filter</source>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter.show.0">
+        <source>Filter details</source>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter.show.1">
+        <source>View details of the filter ID %s</source>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter.edit.0">
+        <source>Edit filter</source>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter.edit.1">
+        <source>Edit filter ID %s</source>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter.delete.0">
+        <source>Clear filters</source>
+      </trans-unit>
+      <trans-unit id="tl_assetic_filter.delete.1">
+        <source>Delete filter ID %s</source>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
