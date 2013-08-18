@@ -104,7 +104,7 @@ class DefaultFilterFactory
                         $importFilter = AsseticFactory::getInstance()->createFilterChainById($match[1]);
                     }
                 }
-                
+
                 $filter = new CssImportFilter($importFilter);
                 break;
 
@@ -119,7 +119,7 @@ class DefaultFilterFactory
                     {
                         $filter = new CssMinFilter();
                     }
-                }               
+                }
                 break;
 
             case 'cssRewrite':
@@ -183,15 +183,21 @@ class DefaultFilterFactory
                 break;
 
             case 'less':
-                if ($filterConfig['nodePath'] && $filterConfig['nodePaths']) {
-                    $filter = new LessFilter($filterConfig['nodePath'], $filterConfig['nodePaths']);
-                }
-                else if ($filterConfig['nodePath']) {
+                if ($filterConfig['nodePath']) {
                     $filter = new LessFilter($filterConfig['nodePath']);
                 }
                 else {
                     $filter = new LessFilter();
-                }
+				}
+
+				$paths = deserialize($filterConfig['nodePaths']);
+				if (is_array($paths) && count($paths)) {
+					$temp = array();
+					foreach ($paths as $path) {
+						$temp[] = $path['path'];
+					}
+					$filter->setNodePaths($temp);
+				}
                 break;
 
             case 'lessphp':
@@ -218,15 +224,21 @@ class DefaultFilterFactory
                 break;
 
             case 'stylus':
-                if ($filterConfig['nodePath'] && $filterConfig['nodePaths']) {
-                    $filter = new StylusFilter($filterConfig['nodePath'], $filterConfig['nodePaths']);
-                }
-                else if ($filterConfig['nodePath']) {
+                if ($filterConfig['nodePath']) {
                     $filter = new StylusFilter($filterConfig['nodePath']);
                 }
                 else {
                     $filter = new StylusFilter();
                 }
+
+				$paths = deserialize($filterConfig['nodePaths']);
+				if (is_array($paths) && count($paths)) {
+					$temp = array();
+					foreach ($paths as $path) {
+						$temp[] = $path['path'];
+					}
+					$filter->setNodePaths($temp);
+				}
                 break;
 
             case 'uglifyCss':

@@ -308,14 +308,16 @@ $GLOBALS['TL_DCA']['tl_assetic_filter'] = array
             'label'     => &$GLOBALS['TL_LANG']['tl_assetic_filter']['nodePaths'],
             'inputType' => 'multiColumnWizard',
             'exclude'   => true,
-            'eval'      => array('columnFields' => array(
-                'path'     => array(
-                    'label'     => &$GLOBALS['TL_LANG']['tl_assetic_filter']['nodePathsPath'],
-                    'inputType' => 'text',
-                    'eval'      => array('style'=> 'width:500px'),
-                ),
+			'eval'      => array(
+				'columnFields' => array(
+					'path'     => array(
+						'label'     => &$GLOBALS['TL_LANG']['tl_assetic_filter']['nodePathsPath'],
+						'inputType' => 'text',
+						'eval'      => array('style'=> 'width:500px'),
+					),
+				),
                 'tl_class' => 'clr'
-            )),
+            ),
             'sql'       => "blob NULL",
         ),
         'rubyPath'                 => array
