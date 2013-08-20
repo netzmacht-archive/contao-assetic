@@ -27,12 +27,12 @@
         <target xml:lang="de">Den Filter deaktivieren, damit wird er bei der Verarbeitung ignoriert ohne das man ihn aus der Chain entfernen muss.</target>
       </trans-unit>
       <trans-unit id="tl_assetic_filter.notInDebug.0">
-        <source xml:lang="de">nicht im Debug Modus</source>
-        <target xml:lang="de">nicht im Debug Modus</target>
+        <source xml:lang="de">nicht im Designer Modus</source>
+        <target xml:lang="de">nicht im Designer Modus</target>
       </trans-unit>
       <trans-unit id="tl_assetic_filter.notInDebug.1">
-        <source xml:lang="de">Der Filter wird im Debug Modus deaktiviert.</source>
-        <target xml:lang="de">Der Filter wird im Debug Modus deaktiviert.</target>
+        <source xml:lang="de">Der Filter wird im Designer Modus deaktiviert.</source>
+        <target xml:lang="de">Der Filter wird im Designer Modus deaktiviert.</target>
       </trans-unit>
       <trans-unit id="tl_assetic_filter.nodePath.0">
         <source xml:lang="de">node Executeable</source>
