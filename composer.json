@@ -42,7 +42,7 @@
 	},
 	"extra":{
 		"contao": {
-			"symlinks":{
+			"sources":{
 				"contao":"system/modules/assetic"
 			}
 		},
