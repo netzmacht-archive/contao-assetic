@@ -180,9 +180,8 @@ $GLOBALS['TL_DCA']['tl_assetic_filter'] = array
             'status' => array('disabled', 'notInDebug'),
         ),
         'scssphp'              => array(
-            'filter'  => array('type', 'note'),
-            'scssphp' => array('scssphpCompass'),
-            'status'  => array('disabled', 'notInDebug'),
+            'filter' => array('type', 'note'),
+            'status' => array('disabled', 'notInDebug'),
         ),
         'stylus'               => array(
             'filter' => array('type', 'note'),
@@ -512,18 +511,6 @@ $GLOBALS['TL_DCA']['tl_assetic_filter'] = array
                                  'tl_class'  => 'w50'),
             'sql'       => "varchar(255) NOT NULL default ''",
         ),
-
-        /**
-         * SCSSphp settings
-         */
-		'scssphpCompass'           => array
-		(
-            'label'     => &$GLOBALS['TL_LANG']['tl_assetic_filter']['scssphpCompass'],
-            'inputType' => 'checkbox',
-            'exclude'   => true,
-            'eval'      => array('tl_class'  => 'w50'),
-            'sql'       => "char(1) NOT NULL default ''",
-		),
 
         /**
          * Closure settings

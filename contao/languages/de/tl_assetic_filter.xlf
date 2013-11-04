@@ -170,14 +170,6 @@
         <source xml:lang="de">Geben Sie hier den Pfad zur &lt;code&gt;sass&lt;/code&gt; Executeable an (Standard: /usr/bin/sass).</source>
         <target xml:lang="de">Geben Sie hier den Pfad zur &lt;code&gt;sass&lt;/code&gt; Executeable an (Standard: /usr/bin/sass).</target>
       </trans-unit>
-      <trans-unit id="tl_assetic_filter.scssphpCompass.0">
-        <source xml:lang="de">SCSS PHP Compass aktivieren</source>
-        <target xml:lang="de">SCSS PHP Compass aktivieren</target>
-      </trans-unit>
-      <trans-unit id="tl_assetic_filter.scssphpCompass.1">
-        <source xml:lang="de">Wenn &lt;code&gt;leafo/scssphp-compass&lt;/code&gt; installiert ist, können Sie die Erweiterung hier aktivieren.</source>
-        <target xml:lang="de">Wenn &lt;code&gt;leafo/scssphp-compass&lt;/code&gt; installiert ist, können Sie die Erweiterung hier aktivieren.</target>
-      </trans-unit>
       <trans-unit id="tl_assetic_filter.closurePath.0">
         <source xml:lang="de">Closure JAR</source>
         <target xml:lang="de">Closure JAR</target>
@@ -225,10 +217,6 @@
       <trans-unit id="tl_assetic_filter.less_legend">
         <source xml:lang="de">Less</source>
         <target xml:lang="de">Less</target>
-      </trans-unit>
-      <trans-unit id="tl_assetic_filter.scssphp_legend">
-        <source xml:lang="de">SCSS PHP</source>
-        <target xml:lang="de">SCSS PHP</target>
       </trans-unit>
       <trans-unit id="tl_assetic_filter.stylus_legend">
         <source xml:lang="de">Stylus</source>
