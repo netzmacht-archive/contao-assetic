@@ -74,6 +74,8 @@ class DefaultFilterFactory
                 else {
                     $filter = new CompassFilter();
                 }
+				$filter->setDefaultEncoding('utf-8');
+				$filter->setExternalEncoding('utf-8');
                 break;
 
 	        case 'cssCrush':
