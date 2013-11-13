@@ -40,6 +40,7 @@ use Assetic\Filter\Sass\SassFilter;
 use Assetic\Filter\Sass\ScssFilter;
 use Assetic\Filter\Yui\CssCompressorFilter;
 use Assetic\Filter\Yui\JsCompressorFilter;
+use ContaoAssetic\Filter\ConfiguringCompassFilterWrapper;
 use ContaoAssetic\Filter\JsImportFilter;
 use ContaoAssetic\Filter\NoOpFilter;
 use ContaoAssetic\Filter\MrclayCssMinFilter;
@@ -74,8 +75,11 @@ class DefaultFilterFactory
                 else {
                     $filter = new CompassFilter();
                 }
+
 				$filter->setDefaultEncoding('utf-8');
 				$filter->setExternalEncoding('utf-8');
+
+				$filter = new ConfiguringCompassFilterWrapper($filter);
                 break;
 
 	        case 'cssCrush':
