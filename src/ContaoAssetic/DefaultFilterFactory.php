@@ -79,7 +79,21 @@ class DefaultFilterFactory
 				$filter->setDefaultEncoding('utf-8');
 				$filter->setExternalEncoding('utf-8');
 
-				$filter = new ConfiguringCompassFilterWrapper($filter);
+				$filter->setImagesDir(TL_ROOT);
+				$filter->setFontsDir(TL_ROOT);
+				$filter->setJavascriptsDir(TL_ROOT);
+
+				// $filter->setGeneratedImagesPath(TL_ROOT . '/assets/images');
+				$filter->setGeneratedImagesPath(TL_ROOT . '/');
+
+				$filter->setHttpPath('/' . \Environment::get('path') . 'assets/images/');
+				$filter->setHttpImagesPath('/' . \Environment::get('path') . 'assets/images/');
+				$filter->setHttpFontsPath('/' . \Environment::get('path') . 'assets/fonts/');
+				$filter->setHttpJavascriptsPath('/' . \Environment::get('path') . 'assets/js/');
+				// $filter->setHttpGeneratedImagesPath('/' . \Environment::get('path') . 'assets/images/');
+				$filter->setHttpGeneratedImagesPath('/' . \Environment::get('path'));
+
+				$filter->setRelativeAssets(true);
                 break;
 
 	        case 'cssCrush':
