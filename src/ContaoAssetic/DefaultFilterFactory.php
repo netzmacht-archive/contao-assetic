@@ -129,8 +129,6 @@ class DefaultFilterFactory
                 break;
 
             case 'cssMin':
-                if(class_exists("cssmin"))
-                {
                     if(file_exists(TL_ROOT . '/composer/vendor/mrclay/minify/min/lib/CSSmin.php'))
                     {
                         $filter = new MrclayCssMinFilter();
@@ -139,7 +137,6 @@ class DefaultFilterFactory
                     {
                         $filter = new CssMinFilter();
                     }
-                }
                 break;
 
             case 'cssRewrite':
