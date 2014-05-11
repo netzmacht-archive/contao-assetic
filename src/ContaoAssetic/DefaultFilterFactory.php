@@ -76,8 +76,10 @@ class DefaultFilterFactory
                     $filter = new CompassFilter();
                 }
 
-				$filter->setDefaultEncoding('utf-8');
-				$filter->setExternalEncoding('utf-8');
+				if (method_exists($filter, 'setDefaultEncoding')) {
+					$filter->setDefaultEncoding('utf-8');
+					$filter->setExternalEncoding('utf-8');
+				}
 
 				$filter->setImagesDir(TL_ROOT);
 				$filter->setFontsDir(TL_ROOT);
@@ -93,7 +95,9 @@ class DefaultFilterFactory
 				// $filter->setHttpGeneratedImagesPath('/' . \Environment::get('path') . 'assets/images/');
 				$filter->setHttpGeneratedImagesPath('/' . \Environment::get('path'));
 
-				$filter->setRelativeAssets(true);
+				if (method_exists($filter, 'setRelativeAssets')) {
+					$filter->setRelativeAssets(true);
+				}
                 break;
 
 	        case 'cssCrush':
