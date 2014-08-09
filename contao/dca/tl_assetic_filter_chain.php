@@ -49,7 +49,7 @@ $GLOBALS['TL_DCA']['tl_assetic_filter_chain'] = array
         (
             'fields'         => array('type', 'name'),
             'format'         => '[%s] %s',
-            'label_callback' => array('ContaoAssetic\DataContainer\AsseticFilterChain', 'listChain'),
+            'label_callback' => array('Bit3\Contao\Assetic\DataContainer\AsseticFilterChain', 'listChain'),
         ),
         'global_operations' => array
         (
@@ -153,7 +153,7 @@ $GLOBALS['TL_DCA']['tl_assetic_filter_chain'] = array
             'label'            => &$GLOBALS['TL_LANG']['tl_assetic_filter_chain']['filters'],
             'inputType'        => 'checkboxWizard',
             'exclude'          => true,
-            'options_callback' => array('ContaoAssetic\DataContainer\AsseticFilterChain', 'getFilterOptions'),
+            'options_callback' => array('Bit3\Contao\Assetic\DataContainer\AsseticFilterChain', 'getFilterOptions'),
             'reference'        => &$GLOBALS['TL_LANG']['assetic'],
             'eval'             => array('multiple' => true),
             'sql'              => "blob NULL"

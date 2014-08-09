@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace ContaoAssetic\Filter;
+namespace Bit3\Contao\Assetic\Filter;
 
 use Assetic\Asset\AssetInterface;
 use Assetic\Asset\FileAsset;

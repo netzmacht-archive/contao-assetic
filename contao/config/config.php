@@ -15,15 +15,15 @@
 /**
  * Models
  */
-$GLOBALS['TL_MODELS']['tl_assetic_filter']       = 'ContaoAssetic\Model\FilterModel';
-$GLOBALS['TL_MODELS']['tl_assetic_filter_chain'] = 'ContaoAssetic\Model\FilterChainModel';
+$GLOBALS['TL_MODELS']['tl_assetic_filter']       = 'Bit3\Contao\Assetic\Model\FilterModel';
+$GLOBALS['TL_MODELS']['tl_assetic_filter_chain'] = 'Bit3\Contao\Assetic\Model\FilterChainModel';
 
 /**
  * Back end modules
  */
 $GLOBALS['BE_MOD']['system']['assetic_config'] = array(
     'tables'     => array('', 'tl_assetic_filter', 'tl_assetic_filter_chain'),
-    'callback'   => 'ContaoAssetic\AsseticConfigModule',
+    'callback'   => 'Bit3\Contao\Assetic\AsseticConfigModule',
     'icon'       => 'system/modules/assetic/assets/images/assetic.png',
     'stylesheet' => 'system/modules/assetic/assets/css/backend.css',
 );
@@ -36,7 +36,7 @@ $GLOBALS['ASSETIC']['compiler']['compass']         = 'Assetic\Filter\CompassFilt
 $GLOBALS['ASSETIC']['compiler']['cssCrush']        = 'Assetic\Filter\CssCrushFilter';
 $GLOBALS['ASSETIC']['compiler']['cssEmbed']        = 'Assetic\Filter\CssEmbedFilter';
 $GLOBALS['ASSETIC']['compiler']['cssImport']       = 'Assetic\Filter\CssImportFilter';
-$GLOBALS['ASSETIC']['compiler']['jsImport']        = 'ContaoAssetic\Filter\JsImportFilter';
+$GLOBALS['ASSETIC']['compiler']['jsImport']        = 'Bit3\Contao\Assetic\Filter\JsImportFilter';
 $GLOBALS['ASSETIC']['compiler']['cssRewrite']      = 'Assetic\Filter\CssRewriteFilter';
 $GLOBALS['ASSETIC']['compiler']['dart']            = 'Assetic\Filter\DartFilter';
 $GLOBALS['ASSETIC']['compiler']['gss']             = 'Assetic\Filter\GssFilter';

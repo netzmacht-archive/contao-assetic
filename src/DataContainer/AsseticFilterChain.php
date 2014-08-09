@@ -1,15 +1,15 @@
 <?php
 
-namespace ContaoAssetic\DataContainer;
+namespace Bit3\Contao\Assetic\DataContainer;
 
-use ContaoAssetic\Model\FilterModel;
+use Bit3\Contao\Assetic\Model\FilterModel;
 
 class AsseticFilterChain
 {
     /**
      * Singleton instance.
      *
-     * @var ContaoAssetic\DataContainer\AsseticFilterChain
+     * @var Bit3\Contao\Assetic\DataContainer\AsseticFilterChain
      */
     protected static $objInstance = null;
 
@@ -17,7 +17,7 @@ class AsseticFilterChain
      * Get singleton instance.
      *
      * @static
-     * @return ContaoAssetic\DataContainer\AsseticFilterChain
+     * @return Bit3\Contao\Assetic\DataContainer\AsseticFilterChain
      */
     public static function getInstance()
     {

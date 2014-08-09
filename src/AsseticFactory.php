@@ -11,10 +11,10 @@
  * @license http://www.gnu.org/licenses/lgpl-3.0.html LGPL
  */
 
-namespace ContaoAssetic;
+namespace Bit3\Contao\Assetic;
 
-use ContaoAssetic\Model\FilterModel;
-use ContaoAssetic\Model\FilterChainModel;
+use Bit3\Contao\Assetic\Model\FilterModel;
+use Bit3\Contao\Assetic\Model\FilterChainModel;
 use Assetic\Filter\FilterCollection;
 
 class AsseticFactory

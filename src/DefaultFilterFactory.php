@@ -11,7 +11,7 @@
  * @license http://www.gnu.org/licenses/lgpl-3.0.html LGPL
  */
 
-namespace ContaoAssetic;
+namespace Bit3\Contao\Assetic;
 
 use Assetic\Filter\CoffeeScriptFilter;
 use Assetic\Filter\CompassFilter;
@@ -40,10 +40,10 @@ use Assetic\Filter\Sass\SassFilter;
 use Assetic\Filter\Sass\ScssFilter;
 use Assetic\Filter\Yui\CssCompressorFilter;
 use Assetic\Filter\Yui\JsCompressorFilter;
-use ContaoAssetic\Filter\ConfiguringCompassFilterWrapper;
-use ContaoAssetic\Filter\JsImportFilter;
-use ContaoAssetic\Filter\NoOpFilter;
-use ContaoAssetic\Filter\MrclayCssMinFilter;
+use Bit3\Contao\Assetic\Filter\ConfiguringCompassFilterWrapper;
+use Bit3\Contao\Assetic\Filter\JsImportFilter;
+use Bit3\Contao\Assetic\Filter\NoOpFilter;
+use Bit3\Contao\Assetic\Filter\MrclayCssMinFilter;
 
 class DefaultFilterFactory
     implements FilterFactory

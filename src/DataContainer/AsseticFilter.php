@@ -1,8 +1,8 @@
 <?php
 
-namespace ContaoAssetic\DataContainer;
+namespace Bit3\Contao\Assetic\DataContainer;
 
-use ContaoAssetic\Model\FilterChainModel;
+use Bit3\Contao\Assetic\Model\FilterChainModel;
 
 class AsseticFilter
 {

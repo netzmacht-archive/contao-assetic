@@ -49,7 +49,7 @@ $GLOBALS['TL_DCA']['tl_assetic_filter'] = array
         (
             'fields'         => array('type', 'note'),
             'format'         => '%s',
-            'label_callback' => array('ContaoAssetic\DataContainer\AsseticFilter', 'filterLabel')
+            'label_callback' => array('Bit3\Contao\Assetic\DataContainer\AsseticFilter', 'filterLabel')
         ),
         'global_operations' => array
         (
@@ -248,7 +248,7 @@ $GLOBALS['TL_DCA']['tl_assetic_filter'] = array
             'sorting'          => true,
             'flag'             => 1,
             'filter'           => true,
-            'options_callback' => array('ContaoAssetic\DataContainer\AsseticFilter', 'getFilterTypeOptions'),
+            'options_callback' => array('Bit3\Contao\Assetic\DataContainer\AsseticFilter', 'getFilterTypeOptions'),
             'reference'        => $GLOBALS['TL_LANG']['assetic'],
             'eval'             => array('mandatory'          => true,
                                         'tl_class'           => 'w50',
@@ -372,7 +372,7 @@ $GLOBALS['TL_DCA']['tl_assetic_filter'] = array
             'label'     => &$GLOBALS['TL_LANG']['tl_assetic_filter']['cssCrushPlugins'],
             'inputType' => 'checkboxWizard',
             'exclude'   => true,
-			'options_callback' => array('ContaoAssetic\DataContainer\AsseticFilter', 'getCssCrushPlugins'),
+			'options_callback' => array('Bit3\Contao\Assetic\DataContainer\AsseticFilter', 'getCssCrushPlugins'),
             'eval'      => array('multiple' => true),
             'sql'       => "blob NULL",
 		),
@@ -399,7 +399,7 @@ $GLOBALS['TL_DCA']['tl_assetic_filter'] = array
             'label'            => &$GLOBALS['TL_LANG']['tl_assetic_filter']['importFilter'],
             'inputType'        => 'select',
             'exclude'          => true,
-            'options_callback' => array('ContaoAssetic\DataContainer\AsseticFilter', 'getImportFilterOptions'),
+            'options_callback' => array('Bit3\Contao\Assetic\DataContainer\AsseticFilter', 'getImportFilterOptions'),
             'reference'        => &$GLOBALS['TL_LANG']['assetic'],
             'eval'             => array('tl_class'           => 'w50',
                                         'includeBlankOption' => true),
@@ -410,7 +410,7 @@ $GLOBALS['TL_DCA']['tl_assetic_filter'] = array
             'label'            => &$GLOBALS['TL_LANG']['tl_assetic_filter']['importFilterJs'],
             'inputType'        => 'select',
             'exclude'          => true,
-            'options_callback' => array('ContaoAssetic\DataContainer\AsseticFilter', 'getImportFilterJsOptions'),
+            'options_callback' => array('Bit3\Contao\Assetic\DataContainer\AsseticFilter', 'getImportFilterJsOptions'),
             'reference'        => &$GLOBALS['TL_LANG']['assetic'],
             'eval'             => array('tl_class'           => 'w50',
                                         'includeBlankOption' => true),
