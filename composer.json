@@ -36,8 +36,8 @@
 		"contao-legacy/assetic": "self.version"
 	},
 	"autoload":{
-		"psr-0": {
-			"ContaoAssetic": "src/"
+		"psr-4": {
+			"ContaoAssetic\\": "src/"
 		}
 	},
 	"extra":{
