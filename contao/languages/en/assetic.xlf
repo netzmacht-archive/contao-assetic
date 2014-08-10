@@ -20,9 +20,6 @@
       <trans-unit id="assetic.compass">
         <source>Compass (CSS)</source>
       </trans-unit>
-      <trans-unit id="assetic.cssCrush">
-        <source>CssCrush (CSS)</source>
-      </trans-unit>
       <trans-unit id="assetic.cssEmbed">
         <source>CSS Embed (CSS)</source>
       </trans-unit>

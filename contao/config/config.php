@@ -3,29 +3,35 @@
 /**
  * Assetic for Contao Open Source CMS
  *
- * Copyright (C) 2013 bit3 UG
- *
- * @package Assetic
- * @author  Tristan Lins <tristan.lins@bit3.de>
- * @link    http://bit3.de
- * @license http://www.gnu.org/licenses/lgpl-3.0.html LGPL
+ * @copyright 2014 bit3 UG <http://bit3.de>
+ * @author    Tristan Lins <tristan.lins@bit3.de>
+ * @package   bit3/contao-assetic
+ * @license   http://www.gnu.org/licenses/lgpl-3.0.html LGPL-3.0+
+ * @filesource
  */
-
 
 /**
  * Models
  */
-$GLOBALS['TL_MODELS']['tl_assetic_filter']       = 'ContaoAssetic\Model\FilterModel';
-$GLOBALS['TL_MODELS']['tl_assetic_filter_chain'] = 'ContaoAssetic\Model\FilterChainModel';
+$GLOBALS['TL_MODELS']['tl_assetic_filter']       = 'Bit3\Contao\Assetic\Model\FilterModel';
+$GLOBALS['TL_MODELS']['tl_assetic_filter_chain'] = 'Bit3\Contao\Assetic\Model\FilterChainModel';
 
 /**
  * Back end modules
  */
-$GLOBALS['BE_MOD']['system']['assetic_config'] = array(
-    'tables'     => array('', 'tl_assetic_filter', 'tl_assetic_filter_chain'),
-    'callback'   => 'ContaoAssetic\AsseticConfigModule',
-    'icon'       => 'system/modules/assetic/assets/images/assetic.png',
-    'stylesheet' => 'system/modules/assetic/assets/css/backend.css',
+$GLOBALS['BE_MOD']['system']['assetic']        = array(
+	'icon' => 'system/modules/assetic/assets/images/assetic.png',
+);
+$GLOBALS['BE_MOD']['system']['assetic_filter'] = array(
+	'nested'     => 'assetic',
+	'tables'     => array('tl_assetic_filter'),
+	'icon'       => 'system/modules/assetic/assets/images/filter.png',
+	'stylesheet' => 'system/modules/assetic/assets/css/backend.css',
+);
+$GLOBALS['BE_MOD']['system']['assetic_chain'] = array(
+	'nested' => 'assetic',
+	'tables' => array('tl_assetic_filter_chain'),
+	'icon'   => 'system/modules/assetic/assets/images/chain.png',
 );
 
 /**
@@ -33,10 +39,9 @@ $GLOBALS['BE_MOD']['system']['assetic_config'] = array(
  */
 $GLOBALS['ASSETIC']['compiler']['coffee']          = 'Assetic\Filter\CoffeeScriptFilter';
 $GLOBALS['ASSETIC']['compiler']['compass']         = 'Assetic\Filter\CompassFilter';
-$GLOBALS['ASSETIC']['compiler']['cssCrush']        = 'Assetic\Filter\CssCrushFilter';
 $GLOBALS['ASSETIC']['compiler']['cssEmbed']        = 'Assetic\Filter\CssEmbedFilter';
 $GLOBALS['ASSETIC']['compiler']['cssImport']       = 'Assetic\Filter\CssImportFilter';
-$GLOBALS['ASSETIC']['compiler']['jsImport']        = 'ContaoAssetic\Filter\JsImportFilter';
+$GLOBALS['ASSETIC']['compiler']['jsImport']        = 'Bit3\Contao\Assetic\Filter\JsImportFilter';
 $GLOBALS['ASSETIC']['compiler']['cssRewrite']      = 'Assetic\Filter\CssRewriteFilter';
 $GLOBALS['ASSETIC']['compiler']['dart']            = 'Assetic\Filter\DartFilter';
 $GLOBALS['ASSETIC']['compiler']['gss']             = 'Assetic\Filter\GssFilter';
@@ -68,7 +73,6 @@ $GLOBALS['ASSETIC']['minimizer']['yuiJs']      = 'Assetic\Filter\Yui\JsCompresso
  * Assetic css compatible filters
  */
 $GLOBALS['ASSETIC']['css'][] = 'compass';
-$GLOBALS['ASSETIC']['css'][] = 'cssCrush';
 $GLOBALS['ASSETIC']['css'][] = 'cssEmbed';
 $GLOBALS['ASSETIC']['css'][] = 'cssImport';
 $GLOBALS['ASSETIC']['css'][] = 'cssMin';
@@ -110,3 +114,8 @@ $GLOBALS['ASSETIC']['IMG']['jpegtran']  = 'Assetic\Filter\JpegtranFilter';
 $GLOBALS['ASSETIC']['IMG']['optiPng']   = 'Assetic\Filter\OptiPngFilter';
 $GLOBALS['ASSETIC']['IMG']['pngout']    = 'Assetic\Filter\PngoutFilter';
 */
+
+/**
+ * Event subscriber
+ */
+$GLOBALS['TL_EVENT_SUBSCRIBERS'][] = 'Bit3\Contao\Assetic\FilterFactory';
