@@ -1,91 +1,104 @@
 <?php
 
+/**
+ * Assetic for Contao Open Source CMS
+ *
+ * @copyright 2014 bit3 UG <http://bit3.de>
+ * @author    Tristan Lins <tristan.lins@bit3.de>
+ * @package   bit3/contao-assetic
+ * @license   http://www.gnu.org/licenses/lgpl-3.0.html LGPL-3.0+
+ * @filesource
+ */
+
 namespace Bit3\Contao\Assetic\DataContainer;
 
 use Bit3\Contao\Assetic\Model\FilterModel;
 
 class AsseticFilterChain
 {
-    /**
-     * Singleton instance.
-     *
-     * @var Bit3\Contao\Assetic\DataContainer\AsseticFilterChain
-     */
-    protected static $objInstance = null;
 
-    /**
-     * Get singleton instance.
-     *
-     * @static
-     * @return Bit3\Contao\Assetic\DataContainer\AsseticFilterChain
-     */
-    public static function getInstance()
-    {
-        if (self::$objInstance === null) {
-            self::$objInstance = new self;
-        }
-        return self::$objInstance;
-    }
+	/**
+	 * Singleton instance.
+	 *
+	 * @var AsseticFilterChain
+	 */
+	protected static $objInstance = null;
 
-    /**
-     * Singleton constructor
-     */
-    protected function __construct()
-    {
-    }
+	/**
+	 * Get singleton instance.
+	 *
+	 * @static
+	 * @return AsseticFilterChain
+	 */
+	public static function getInstance()
+	{
+		if (self::$objInstance === null) {
+			self::$objInstance = new self;
+		}
+		return self::$objInstance;
+	}
 
-    public function listChain($row, $label, $dc, $fields)
-    {
-        $label .= '<br>&nbsp;&nbsp;&nbsp;';
+	/**
+	 * Singleton constructor
+	 */
+	protected function __construct()
+	{
+	}
 
-        $filters = deserialize($row['filters'], true);
+	public function listChain($row, $label, $dc, $fields)
+	{
+		$label .= '<br>&nbsp;&nbsp;&nbsp;';
 
-        foreach ($filters as $key) {
-            list($type, $id) = explode(':', $key, 2);
-            $filter = FilterModel::findByPk($id);
-            if ($filter) {
-                $label .= '&rarr; ';
-                $label .= $GLOBALS['TL_LANG']['assetic'][$filter->type]
-                    ? : $filter->type;
-                if ($filter->note) {
-                    $label .= ' [' . $filter->note . ']';
-                }
-                $label .= ' ';
-            }
-        }
+		$filters = deserialize($row['filters'], true);
 
-        $label = '<div style="padding: 4px 0;">' . $label . '</div>';
+		foreach ($filters as $key) {
+			list($type, $id) = explode(':', $key, 2);
+			$filter = FilterModel::findByPk($id);
+			if ($filter) {
+				$label .= '&rarr; ';
+				$label .= $GLOBALS['TL_LANG']['assetic'][$filter->type]
+					?: $filter->type;
+				if ($filter->note) {
+					$label .= ' [' . $filter->note . ']';
+				}
+				$label .= ' ';
+			}
+		}
 
-        return $label;
-    }
+		$label = '<div style="padding: 4px 0;">' . $label . '</div>';
 
-    public function getFilterOptions($dc)
-    {
-        $options = array();
+		return $label;
+	}
 
-        $filter = FilterModel::findAll(array('order' => 'type'));
+	public function getFilterOptions($dc)
+	{
+		$options = array();
 
-        if ($filter) {
-            while ($filter->next()) {
-                if (!in_array($filter->type,
-                              $GLOBALS['ASSETIC'][$dc->activeRecord->type])
-                ) {
-                    continue;
-                }
+		$filter = FilterModel::findAll(array('order' => 'type'));
 
-                $label = $GLOBALS['TL_LANG']['assetic'][$filter->type]
-                    ? : $filter->type;
+		if ($filter) {
+			while ($filter->next()) {
+				if (!in_array(
+					$filter->type,
+					$GLOBALS['ASSETIC'][$dc->activeRecord->type]
+				)
+				) {
+					continue;
+				}
 
-                if ($filter->note) {
-                    $label .= ' [' . $filter->note . ']';
-                }
+				$label = $GLOBALS['TL_LANG']['assetic'][$filter->type]
+					?: $filter->type;
 
-                $GLOBALS['TL_LANG']['assetic']['filter:' . $filter->id] = $label;
+				if ($filter->note) {
+					$label .= ' [' . $filter->note . ']';
+				}
 
-                $options[] = 'filter:' . $filter->id;
-            }
-        }
+				$GLOBALS['TL_LANG']['assetic']['filter:' . $filter->id] = $label;
 
-        return $options;
-    }
+				$options[] = 'filter:' . $filter->id;
+			}
+		}
+
+		return $options;
+	}
 }

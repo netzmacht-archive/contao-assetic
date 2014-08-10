@@ -2,11 +2,23 @@
 <xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
   <file original="system/modules/assetic/languages/de/modules.php" source-language="en" datatype="php" date="2012-11-09T20:21:42+00:00">
     <body>
-      <trans-unit id="MOD.assetic_config.0">
+      <trans-unit id="MOD.assetic.0">
         <source>Assetic</source>
       </trans-unit>
-      <trans-unit id="MOD.assetic_config.1">
+      <trans-unit id="MOD.assetic.1">
         <source>Configure Assetic Management </source>
+      </trans-unit>
+      <trans-unit id="MOD.assetic_filter.0">
+        <source>Filter</source>
+      </trans-unit>
+      <trans-unit id="MOD.assetic_filter.1">
+        <source>Define and configure asset filters.</source>
+      </trans-unit>
+      <trans-unit id="MOD.assetic_chain.0">
+        <source>Filter Chain</source>
+      </trans-unit>
+      <trans-unit id="MOD.assetic_chain.1">
+        <source>Defining filter chains of one or more filters.</source>
       </trans-unit>
     </body>
   </file>

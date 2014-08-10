@@ -3,161 +3,142 @@
 /**
  * Assetic for Contao Open Source CMS
  *
- * Copyright (C) 2013 bit3 UG
- *
- * @package Assetic
- * @author  Tristan Lins <tristan.lins@bit3.de>
- * @link    http://bit3.de
- * @license http://www.gnu.org/licenses/lgpl-3.0.html LGPL
+ * @copyright 2014 bit3 UG <http://bit3.de>
+ * @author    Tristan Lins <tristan.lins@bit3.de>
+ * @package   bit3/contao-assetic
+ * @license   http://www.gnu.org/licenses/lgpl-3.0.html LGPL-3.0+
+ * @filesource
  */
 
 namespace Bit3\Contao\Assetic;
 
+use Bit3\Contao\Assetic\Event\CreateFilterEvent;
 use Bit3\Contao\Assetic\Model\FilterModel;
 use Bit3\Contao\Assetic\Model\FilterChainModel;
 use Assetic\Filter\FilterCollection;
+use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 
 class AsseticFactory
 {
-    /**
-     * Registered filter factories.
-     *
-     * @var array
-     */
-    protected static $filterFactories = array();
+	public function createFilterOrChain($id, $debug = null)
+	{
+		list($type, $id) = explode(':', $id);
 
-    /**
-     * Register a filter factory.
-     *
-     * @param FilterFactory $filterFactory
-     */
-    public static function registerFilterFactory(FilterFactory $filterFactory)
-    {
-        static::$filterFactories[] = $filterFactory;
-    }
+		switch ($type) {
+			case 'filter':
+				$filter = static::createFilterById(
+					$id,
+					$debug
+				);
+				if ($filter) {
+					return new FilterCollection(array($filter));
+				}
+				break;
 
-    public static function getFilterFactories()
-    {
-        if (!count(static::$filterFactories)) {
-            static::$filterFactories[] = new DefaultFilterFactory();
-        }
+			case 'chain':
+				$chain = static::createFilterChainById(
+					$id,
+					$debug
+				);
+				if ($chain) {
+					return $chain;
+				}
+				break;
+		}
 
-        return static::$filterFactories;
-    }
+		return new FilterCollection();
+	}
 
-    public static function createFilterOrChain($id, $debug = null)
-    {
-        list($type, $id) = explode(':',
-                                   $id);
+	/**
+	 * @param int $id
+	 *
+	 * @return \Assetic\Filter\FilterInterface|null
+	 */
+	public function createFilterById($id, $debug = null)
+	{
+		if ($debug === null) {
+			$debug = $GLOBALS['TL_CONFIG']['debugMode'];
+		}
 
-        switch ($type) {
-            case 'filter':
-                $filter = static::createFilterById($id,
-                                                   $debug);
-                if ($filter) {
-                    return new FilterCollection(array($filter));
-                }
-                break;
+		$options = array();
+		if ($debug) {
+			$options['column'] = 'notInDebug=?';
+			$options['value']  = '';
+		}
 
-            case 'chain':
-                $chain = static::createFilterChainById($id,
-                                                       $debug);
-                if ($chain) {
-                    return $chain;
-                }
-                break;
-        }
+		$filter = FilterModel::findActiveByPk($id, $options);
 
-        return new FilterCollection();
-    }
+		if ($filter) {
+			return static::createFilter($filter->row());
+		}
 
-    /**
-     * @param int $id
-     *
-     * @return \Assetic\Filter\FilterInterface|null
-     */
-    public static function createFilterById($id, $debug = null)
-    {
-        if ($debug === null) {
-            $debug = $GLOBALS['TL_CONFIG']['debugMode'];
-        }
+		return null;
+	}
 
-        $options = array();
-        if ($debug) {
-            $options['column'] = 'notInDebug=?';
-            $options['value']  = '';
-        }
+	/**
+	 * @param array $filterConfig
+	 *
+	 * @return \Assetic\Filter\FilterInterface|null
+	 */
+	public function createFilter(array $filterConfig)
+	{
+		$event = new CreateFilterEvent($filterConfig);
 
-        $filter = FilterModel::findActiveByPk($id,
-                                              $options);
+		/** @var EventDispatcherInterface $eventDispatcher */
+		$eventDispatcher = $GLOBALS['container']['event-dispatcher'];
+		$eventDispatcher->dispatch(AsseticEvents::CREATE_FILTER, $event);
 
-        if ($filter) {
-            return static::createFilter($filter->row());
-        }
+		return $event->getFilter();
+	}
 
-        return null;
-    }
+	/**
+	 * @param int $id
+	 *
+	 * @return \Assetic\Filter\FilterCollection|null
+	 */
+	public function createFilterChainById($id, $debug = null)
+	{
+		$chain = FilterChainModel::findActiveByPk($id);
 
-    /**
-     * @param array $filterConfig
-     *
-     * @return \Assetic\Filter\FilterInterface|null
-     */
-    public static function createFilter(array $filterConfig)
-    {
-        foreach (static::getFilterFactories() as $filterFactory) {
-            $filter = $filterFactory->createFilter($filterConfig);
+		if ($chain) {
+			return static::createFilterChain(
+				$chain->row(),
+				$debug
+			);
+		}
 
-            if ($filter) {
-                return $filter;
-            }
-        }
+		return null;
+	}
 
-        return null;
-    }
+	/**
+	 * @param array $filters
+	 *
+	 * @return \Assetic\Filter\FilterCollection|null
+	 */
+	public function createFilterChain(array $chainConfig, $debug = null)
+	{
+		$chainConfig['filters'] = deserialize(
+			$chainConfig['filters'],
+			true
+		);
 
-    /**
-     * @param int $id
-     *
-     * @return \Assetic\Filter\FilterCollection|null
-     */
-    public static function createFilterChainById($id, $debug = null)
-    {
-        $chain = FilterChainModel::findActiveByPk($id);
+		$filters = array();
 
-        if ($chain) {
-            return static::createFilterChain($chain->row(),
-                                             $debug);
-        }
+		foreach ($chainConfig['filters'] as $id) {
+			$filter = static::createFilterOrChain(
+				$id,
+				$debug
+			);
 
-        return null;
-    }
+			if ($filter) {
+				$filters[] = $filter;
+			}
+		}
 
-    /**
-     * @param array $filters
-     *
-     * @return \Assetic\Filter\FilterCollection|null
-     */
-    public static function createFilterChain(array $chainConfig, $debug = null)
-    {
-        $chainConfig['filters'] = deserialize($chainConfig['filters'],
-                                              true);
+		if (count($filters)) {
+			return new \Assetic\Filter\FilterCollection($filters);
+		}
 
-        $filters = array();
-
-        foreach ($chainConfig['filters'] as $id) {
-            $filter = static::createFilterOrChain($id,
-                                                  $debug);
-
-            if ($filter) {
-                $filters[] = $filter;
-            }
-        }
-
-        if (count($filters)) {
-            return new \Assetic\Filter\FilterCollection($filters);
-        }
-
-        return null;
-    }
+		return null;
+	}
 }

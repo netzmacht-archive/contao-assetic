@@ -62,12 +62,6 @@
       <trans-unit id="tl_assetic_filter.compassPath.1">
         <source>Enter the path to the &lt;code&gt;compass&lt;/code&gt; executeable (default: /usr/bin/compass).</source>
       </trans-unit>
-      <trans-unit id="tl_assetic_filter.cssCrushPlugins.0">
-        <source>Plugins</source>
-      </trans-unit>
-      <trans-unit id="tl_assetic_filter.cssCrushPlugins.1">
-        <source>Here you can select the CssCrush plugins.</source>
-      </trans-unit>
       <trans-unit id="tl_assetic_filter.cssEmbedPath.0">
         <source>CssEmbed JAR</source>
       </trans-unit>

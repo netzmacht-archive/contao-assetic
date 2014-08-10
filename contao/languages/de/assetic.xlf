@@ -26,10 +26,6 @@
         <source xml:lang="de">Compass (CSS)</source>
         <target xml:lang="de">Compass (CSS)</target>
       </trans-unit>
-      <trans-unit id="assetic.cssCrush">
-        <source xml:lang="de">CssCrush (CSS)</source>
-        <target xml:lang="de">CssCrush (CSS)</target>
-      </trans-unit>
       <trans-unit id="assetic.cssEmbed">
         <source xml:lang="de">CSS Embed (CSS)</source>
         <target xml:lang="de">CSS Embed (CSS)</target>
