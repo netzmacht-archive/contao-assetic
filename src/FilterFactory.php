@@ -276,6 +276,7 @@ class FilterFactory implements EventSubscriberInterface
 			$filter->setExternalEncoding('utf-8');
 		}
 
+		$filter->setLoadPaths([TL_ROOT]);
 		$filter->setImagesDir(TL_ROOT);
 		$filter->setFontsDir(TL_ROOT);
 		$filter->setJavascriptsDir(TL_ROOT);
