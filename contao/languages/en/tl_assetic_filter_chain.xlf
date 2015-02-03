@@ -68,6 +68,10 @@
       <trans-unit id="tl_assetic_filter_chain.delete.1">
         <source>Delete chain ID %s</source>
       </trans-unit>
+      <trans-unit id="tl_assetic_filter_chain.status_legend">
+        <source xml:lang="de">Status</source>
+        <target xml:lang="de">Status</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>

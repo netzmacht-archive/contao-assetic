@@ -90,6 +90,10 @@
         <source xml:lang="de">Chain ID %s l&#xF6;schen</source>
         <target xml:lang="de">Chain ID %s l&#xF6;schen</target>
       </trans-unit>
+      <trans-unit id="tl_assetic_filter_chain.status_legend">
+        <source xml:lang="de">Status</source>
+        <target xml:lang="de">Status</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>
