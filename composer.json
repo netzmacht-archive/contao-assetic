@@ -1,11 +1,17 @@
 {
-	"name":"bit3/contao-assetic",
+	"name":"netzmacht/contao-assetic",
 	"description":"Assetic integration for Contao OpenSource CMS",
 	"keywords":["contao", "theme", "css", "js", "stylesheet", "javascript", "assets"],
 	"type":"contao-module",
-	"homepage":"http://bit3.de",
+	"homepage":"http://netzmacht.de",
 	"license":"LGPL-3.0+",
 	"authors":[
+		{
+		  "name": "David Molineus",
+		  "email": "david.molineus@netzmacht.de",
+		  "homepage": "http://netzmacht.de",
+		  "role": "Developer"
+		},
 		{
 			"name":"Tristan Lins",
 			"email":"tristan.lins@bit3.de",
@@ -14,11 +20,11 @@
 		}
 	],
 	"support":{
-		"email":"info@bit3.de",
-		"issues":"https://github.com/bit3/contao-assetic/issues",
-		"wiki":"https://github.com/bit3/contao-assetic/wiki",
+		"email":"mail@netzmacht.de",
+		"issues":"https://github.com/netzmacht/contao-assetic/issues",
+		"wiki":"https://github.com/netzmacht/contao-assetic/wiki",
 		"irc":"irc://irc.freenode.org/contao.dev",
-		"source":"https://github.com/bit3/contao-assetic"
+		"source":"https://github.com/netzmacht/contao-assetic"
 	},
 	"require":{
 		"php":">=5.3",
@@ -28,14 +34,15 @@
 		"contao-community-alliance/dependency-container": "~1.0",
 		"kriswallsmith/assetic":"~1.1",
 		"bit3/contao-nested-menu": "~1.0",
-		"bit3/contao-meta-palettes":"~1.0"
+		"contao-community-alliance/meta-palettes":"~1.0"
 	},
 	"require-dev":{
 		"squizlabs/php_codesniffer":"1.*",
 		"bit3/php-coding-standard":"@dev"
 	},
 	"replace": {
-		"contao-legacy/assetic": "self.version"
+		"contao-legacy/assetic": "self.version",
+		"bit3/contao-assetic": "self.version"
 	},
 	"autoload":{
 		"psr-4": {
