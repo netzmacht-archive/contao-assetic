@@ -51,19 +51,24 @@ class AsseticFilter
     {
         $options = array();
 
-        $filterChain = FilterChainModel::findBy('type',
-                                                'css',
-                                                array('order' => 'type'));
-        while ($filterChain->next()) {
-            $label = '[';
-            $label .= $GLOBALS['TL_LANG']['tl_assetic_filter_chain']['types'][$filterChain->type]
-                ? : $filterChain->type;
-            $label .= '] ';
-            $label .= $filterChain->name;
+        $filterChain = FilterChainModel::findBy(
+            'type',
+            'css',
+            array('order' => 'type')
+        );
 
-            $GLOBALS['TL_LANG']['assetic']['chain:' . $filterChain->id] = $label;
+        if ($filterChain) {
+            while ($filterChain->next()) {
+                $label = '[';
+                $label .= $GLOBALS['TL_LANG']['tl_assetic_filter_chain']['types'][$filterChain->type]
+                    ? : $filterChain->type;
+                $label .= '] ';
+                $label .= $filterChain->name;
 
-            $options['chain'][] = 'chain:' . $filterChain->id;
+                $GLOBALS['TL_LANG']['assetic']['chain:' . $filterChain->id] = $label;
+
+                $options['chain'][] = 'chain:' . $filterChain->id;
+            }
         }
 
         $filter = \Database::getInstance()
@@ -95,19 +100,24 @@ class AsseticFilter
     {
         $options = array();
 
-        $filterChain = FilterChainModel::findBy('type',
-                                                'js',
-                                                array('order' => 'type'));
-        while ($filterChain->next()) {
-            $label = '[';
-            $label .= $GLOBALS['TL_LANG']['tl_assetic_filter_chain']['types'][$filterChain->type]
-                ? : $filterChain->type;
-            $label .= '] ';
-            $label .= $filterChain->name;
+        $filterChain = FilterChainModel::findBy(
+            'type',
+            'js',
+            array('order' => 'type')
+        );
 
-            $GLOBALS['TL_LANG']['assetic']['chain:' . $filterChain->id] = $label;
+        if ($filterChain) {
+            while ($filterChain->next()) {
+                $label = '[';
+                $label .= $GLOBALS['TL_LANG']['tl_assetic_filter_chain']['types'][$filterChain->type]
+                    ? : $filterChain->type;
+                $label .= '] ';
+                $label .= $filterChain->name;
 
-            $options['chain'][] = 'chain:' . $filterChain->id;
+                $GLOBALS['TL_LANG']['assetic']['chain:' . $filterChain->id] = $label;
+
+                $options['chain'][] = 'chain:' . $filterChain->id;
+            }
         }
 
         $filter = \Database::getInstance()
